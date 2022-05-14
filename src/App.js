@@ -14,6 +14,7 @@ import {
 import Footer from "./components/Footer";
 import Sell from "./Pages/Sell";
 function App() {
+  console.log(`it's working`);
   return (
     <div className="App">
       {/* <TopNav /> */}

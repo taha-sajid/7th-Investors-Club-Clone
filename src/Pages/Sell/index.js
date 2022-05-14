@@ -4,7 +4,6 @@ import SellerHeaderData from "../../assets/RequiredData/SellerHeaderData";
 const Sell = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     SellerHeaderData;
-  console.log(SellerHeaderData);
   return (
     <div>
       <Header

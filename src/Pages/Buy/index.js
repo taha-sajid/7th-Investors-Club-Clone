@@ -10,7 +10,6 @@ import cardData from "../../assets/RequiredData/BuyPageLatestEditionData";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
-  console.log(isHomeOpen);
   return (
     <>
       <Header

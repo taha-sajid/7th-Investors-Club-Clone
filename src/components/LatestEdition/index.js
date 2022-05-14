@@ -2,7 +2,6 @@ import React from "react";
 import "./LatestEdition.css";
 
 const LatestEdition = ({ cardData }) => {
-  console.log(cardData);
   return (
     <>
       <div className="latest-addition-section">

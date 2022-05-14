@@ -4,7 +4,6 @@ import PremiumHeaderData from "../../assets/RequiredData/PremiumHeaderData";
 const Premium = () => {
   const { slogon, heading, buttons, isHomeOpen, features, headerImage } =
     PremiumHeaderData;
-  console.log(headerImage);
   return (
     <div>
       <Header
