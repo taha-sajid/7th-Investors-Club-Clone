@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-// import TopNav from "./components/TopNav";
+// import TopNav from "./components/TopNav"
 import Navbar from "./components/Navbar";
 import Buy from "./Pages/Buy";
 import Home from "./Pages/Home";

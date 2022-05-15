@@ -1491,6 +1491,25 @@ const SupportSVG = () => {
     />
   );
 };
+const PolygonSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="16px"
+      height="16px"
+      viewBox="0 0 16 16"
+      class="s-right--lrg"
+      fill="#fec45c"
+    >
+      <g transform="translate(0, 0)">
+        <polygon points="10 6 8 0.256 6 6 0 6 4.89 9.828 2.968 15.744 8 12.088 13.032 15.744 11.11 9.828 16 6 10 6"></polygon>
+      </g>
+    </svg>
+  );
+};
 export {
   StarSVG,
   CupSVG,
@@ -1514,4 +1533,5 @@ export {
   SOPSVG,
   NofeeSVG,
   SiteTransferSVG,
+  PolygonSVG,
 };

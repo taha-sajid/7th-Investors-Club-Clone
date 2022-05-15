@@ -1,0 +1,70 @@
+.analyze-section {
+  padding: 0rem 3rem;
+}
+.analyze-slogon {
+  color: var(--dark-text);
+  border-top: 1px solid rgb(206, 200, 200);
+  padding: 2.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.analyze-slogon i {
+  margin-right: 1.75rem;
+}
+
+.analyze-data-container {
+  /* background-color: cadetblue; */
+  height: 60vh;
+  display: flex;
+}
+.analyze-sidebar {
+  /* background-color: chartreuse; */
+  width: 27%;
+}
+.analyze-info {
+  background-color: chocolate;
+  /* width: 70%; */
+  flex: 1;
+  background-color: white;
+  border: 1px solid rgb(206, 200, 200);
+  border-radius: 0.5rem;
+}
+
+.analyze-sidebar h4 {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.analyze-sidebar ul {
+  list-style: none;
+  /* margin-top: 1rem; */
+  border-left: 1px solid rgb(206, 200, 200);
+}
+.analyze-sidebar ul li {
+  text-transform: capitalize;
+  padding: 1.3em 0rem;
+  padding-left: 1.2rem;
+  cursor: pointer;
+  width: max-content;
+  font-weight: 700;
+}
+.active-analyze {
+  color: var(--color-primary);
+  border-left: 2px solid var(--color-primary);
+}
+.analyze-sidebar ul li:hover {
+  color: var(--color-primary);
+  border-left: 2px solid var(--color-primary);
+}
+
+.analyze-info {
+  padding: 2.5rem;
+}
+
+.analyze-info h2{
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+
+}

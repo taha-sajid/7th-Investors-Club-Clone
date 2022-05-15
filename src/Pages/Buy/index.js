@@ -7,6 +7,7 @@ import LatestEdition from "../../components/LatestEdition";
 import Highlight from "../../components/Highlight";
 import ShowKindness from "../../components/ShowKindness";
 import cardData from "../../assets/RequiredData/BuyPageLatestEditionData";
+import Analyze from "../../components/Analyze";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
@@ -27,6 +28,7 @@ const Buy = () => {
 
         <Highlight />
         <ShowKindness />
+        <Analyze />
       </div>
     </>
   );
