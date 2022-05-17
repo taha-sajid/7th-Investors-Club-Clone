@@ -42,14 +42,18 @@ const Index = () => {
                 Investors<span>club </span>
               </Link>
               <div className="logo-small-screen">
-                <NavLogoMobile />
+                <Link to={"/"}>
+                  <NavLogoMobile />
+                </Link>
               </div>
             </div>
             <div className="nav-menu">
               <Link to={"/buy-online-business"} className="visited-link">
                 buy
               </Link>
-              <Link to={"/sell-your-website"} className="visited-link">sell</Link>
+              <Link to={"/sell-your-website"} className="visited-link">
+                sell
+              </Link>
               <Link to={"/premium"} className="premium">
                 premium
               </Link>

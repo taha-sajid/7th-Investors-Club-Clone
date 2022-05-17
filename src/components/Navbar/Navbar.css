@@ -48,6 +48,7 @@
   margin-left: 1.5rem;
   color: white;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 .nav-logo a:hover {
   color: rgb(167, 167, 167);
@@ -148,9 +149,12 @@
     width: 15px;
   }
 
-  .nav-logo-menu .nav-logo a,
+  .nav-logo-menu .nav-logo a:first-child,
   .nav-logo-menu .nav-menu {
     display: none;
+  }
+  .nav-logo-menu .nav-logo a:last-child {
+    display: flex;
   }
   .nav-active .nav-logo-menu .nav-logo a,
   .nav-active .nav-logo-menu .nav-menu {

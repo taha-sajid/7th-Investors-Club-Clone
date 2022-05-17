@@ -3,7 +3,6 @@
   padding-top: 5rem;
   max-width: 85rem;
   margin: 0 auto;
-
 }
 .buyers-section-heading {
   color: var(--color-primary);
@@ -88,6 +87,7 @@
   align-items: center;
   margin: 3.8rem 0rem;
   width: 22rem;
+  /* width: 100%; */
 }
 .features-data {
   margin-left: 1rem;
@@ -111,6 +111,7 @@
 }
 
 @media only screen and (max-width: 543px) {
+  
   .seo-analysis {
     display: flex;
     flex-direction: column;
@@ -159,7 +160,7 @@
   .buyers-card-heading p {
     color: gray;
   }
-  .features-card {
+  .buyer-features-card {
     width: 100%;
   }
   .features-card .features-data button {
