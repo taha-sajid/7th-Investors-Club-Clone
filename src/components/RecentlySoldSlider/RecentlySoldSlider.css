@@ -15,7 +15,6 @@
   max-width: 85rem;
   margin: 0 auto;
   margin-bottom: 2rem;
-
 }
 .heading i {
   margin-top: 0.3rem;
@@ -31,10 +30,10 @@
 }
 
 .slide {
-  width: 25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 25rem;
   border-radius: 5px;
   padding: 1.5rem 2.5rem;
   background-color: white;

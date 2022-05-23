@@ -1,6 +1,10 @@
 import React from "react";
 import { PolygonSVG } from "../../assets/RequiredData/Svgs";
 import "./Analyze.css";
+import FinancialOverview from "./FinancialOverview";
+import TrafficOverview from "./TrafficOverview";
+import BusinessAnalysis from "./BusinessAnalysis";
+import SiteInformation from "./SiteInformation";
 const index = () => {
   return (
     <>
@@ -21,12 +25,17 @@ const index = () => {
               <ul>
                 <li className="analyze-sidebar-list">finance overview</li>
                 <li className="analyze-sidebar-list">traffic overview</li>
-                <li className="analyze-sidebar-list active-analyze">business analysis</li>
-                <li className="analyze-sidebar-list">site information</li>
+                <li className="analyze-sidebar-list ">business analysis</li>
+                <li className="analyze-sidebar-list active-sidebar">
+                  site information
+                </li>
               </ul>
             </div>
             <div className="analyze-info">
-              <h2>Business overview</h2>
+              {false && <FinancialOverview />}
+              {false && <TrafficOverview />}
+              {true && <BusinessAnalysis />}
+              {false && <SiteInformation />}
             </div>
           </div>
         </div>

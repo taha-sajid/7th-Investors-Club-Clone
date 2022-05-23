@@ -34,7 +34,7 @@ const RecentlySoldSlider = () => {
       } else {
         setCurrentSlide(0);
       }
-    }, 2000);
+    }, 3500);
   }, [currentSlide]);
   return (
     <div className="recently-sold">

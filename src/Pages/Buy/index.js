@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import BuyerHeaderData from "../../assets/RequiredData/BuyerHeaderData";
 import Cards from "../../components/Cards";
@@ -11,6 +11,7 @@ import Analyze from "../../components/Analyze";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
+
   return (
     <>
       <Header

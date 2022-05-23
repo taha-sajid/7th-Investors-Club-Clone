@@ -135,9 +135,11 @@
     transition: all 0.3s ease-in-out;
   }
   .nav-toggle .hamburger .line1 {
+    border-radius: 1px;
     width: 24px;
   }
   .nav-toggle .hamburger .line2 {
+    border-radius: 1px;
     width: 12px;
   }
   .nav-active .hamburger .line1 {

@@ -18,7 +18,7 @@ const LatestEdition = ({ cardData }) => {
             return (
               <div className="addition-cards" key={index}>
                 <p className="category">{category}</p>
-                <div
+                <d  iv
                   className="addition-card"
                   style={{
                     background: ` linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(${image}) `,
@@ -35,7 +35,7 @@ const LatestEdition = ({ cardData }) => {
                       Avg. monthly revenue: <span> {averageRevenue}</span>
                     </div>
                   </div>
-                </div>
+                </d>
               </div>
             );
           })}
