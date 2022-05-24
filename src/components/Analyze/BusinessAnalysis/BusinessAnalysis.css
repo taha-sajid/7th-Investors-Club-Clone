@@ -2,6 +2,7 @@
   padding: 2.5rem 5.5rem;
   padding-bottom: 0rem;
   margin-bottom: 1rem;
+  position: relative;
 }
 .business-analysis-container h2 {
   color: var(--color-primary);
@@ -10,9 +11,9 @@
 .business-analysis-container h2::before {
   content: " ";
   position: absolute;
-  top: 16px;
-  left: -48px;
-  width: 30px;
+  top: 3.3rem;
+  left: 3rem;
+  width: 2rem;
   height: 1px;
   border-bottom: 1px solid var(--color-primary);
 }
@@ -96,10 +97,6 @@
   padding: 5rem 3rem;
   position: relative;
 }
-.business-analysis-section-grow i {
-  /* top: 0; */
-  /* right: 5%; */
-}
 
 .business-analysis-section-grow .buzz-logic {
   /* background-color: cadetblue; */
@@ -138,6 +135,16 @@
   top: 0rem;
   right: 0px;
 }
-.business-analysis-section-grow .grow-now button{
+.business-analysis-section-grow .grow-now button {
   box-shadow: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .business-analysis-container-heading {
+    padding: 2.5rem;
+    padding-bottom: 1rem;
+  }
+  .business-analysis-data {
+    margin: 0 2.5rem;
+  }
 }

@@ -2,14 +2,17 @@
   padding: 0rem 3rem;
   max-width: 85rem;
   margin: 0 auto;
+  padding-bottom: 6rem;
+}
+.analyze-container {
+  border-top: 1px solid rgb(206, 200, 200);
+  /* padding-top: 4rem; */
 }
 .analyze-slogon {
   color: var(--dark-text);
-  border-top: 1px solid rgb(206, 200, 200);
   padding: 2.5rem 0rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* margin-top: -5.5rem; */
 }
 .analyze-slogon i {
   margin-right: 1.75rem;
@@ -19,19 +22,22 @@
   /* background-color: cadetblue; */
   display: flex;
 }
-.analyze-sidebar {
-  /* background-color: chartreuse; */
-  width: 27%;
-}
-.analyze-info {
-  background-color: chocolate;
+
+.analyze-info-container {
+  /* background-color: chocolate; */
   /* width: 70%; */
   flex: 1;
-  background-color: white;
-  border: 1px solid rgb(206, 200, 200);
   border-radius: 0.5rem;
 }
-
+.analyze-info {
+  border: 1px solid rgb(206, 200, 200);
+  background-color: white;
+}
+.analyze-sidebar {
+  /* background-color: chartreuse; */
+  width: 25%;
+  margin-top: 6rem;
+}
 .analyze-sidebar h4 {
   color: var(--color-secondary);
   text-transform: uppercase;
@@ -40,8 +46,6 @@
 
 .analyze-sidebar ul {
   list-style: none;
-  /* margin-top: 1rem; */
-  /* border-left: 1px solid rgb(206, 200, 200); */
 }
 .analyze-sidebar-list {
   text-transform: capitalize;
@@ -54,6 +58,7 @@
   font-size: 14px;
   line-height: 20px;
   width: max-content;
+  letter-spacing: 0.5px;
 }
 
 .analyze-sidebar-list:hover {
@@ -81,4 +86,14 @@
 }
 .analyze-info {
   border-radius: 0.5rem;
+  box-shadow: 0px 26px 46px 1px rgba(128, 128, 128, 0.377);
+}
+
+@media only screen and (max-width: 992px) {
+  .analyze-sidebar {
+    margin-top: 4rem;
+  }
+  .analyze-data-container {
+    flex-direction: column;
+  }
 }

@@ -10,32 +10,34 @@ const index = () => {
     <>
       <div className="analyze-section">
         <div className="analyze-container">
-          <div className="analyze-slogon">
-            <i>
-              <PolygonSVG />
-            </i>
-            <p>
-              Analyze trends in page views and unique visitors with notes
-              explaining any shifts.
-            </p>
-          </div>
           <div className="analyze-data-container">
             <div className="analyze-sidebar">
               <h4>what's covered?</h4>
               <ul>
                 <li className="analyze-sidebar-list">finance overview</li>
                 <li className="analyze-sidebar-list">traffic overview</li>
-                <li className="analyze-sidebar-list ">business analysis</li>
                 <li className="analyze-sidebar-list active-sidebar">
-                  site information
+                  business analysis
                 </li>
+                <li className="analyze-sidebar-list">site information</li>
               </ul>
             </div>
-            <div className="analyze-info">
-              {false && <FinancialOverview />}
-              {false && <TrafficOverview />}
-              {true && <BusinessAnalysis />}
-              {false && <SiteInformation />}
+            <div className="analyze-info-container">
+              <div className="analyze-slogon">
+                <i>
+                  <PolygonSVG />
+                </i>
+                <p>
+                  Analyze trends in page views and unique visitors with notes
+                  explaining any shifts.
+                </p>
+              </div>
+              <div className="analyze-info">
+                {false && <FinancialOverview />}
+                {true && <TrafficOverview />}
+                {false && <BusinessAnalysis />}
+                {false && <SiteInformation />}
+              </div>
             </div>
           </div>
         </div>

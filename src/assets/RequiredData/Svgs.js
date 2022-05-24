@@ -1744,6 +1744,64 @@ const WorkLoadSVG = () => {
     </svg>
   );
 };
+const AllertSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="16px"
+      height="16px"
+      viewBox="0 0 16 16"
+      class="s-right--med"
+    >
+      <g transform="translate(0, 0)">
+        <path
+          fill="#d84a4a"
+          d="M15.216,13.529L8.882,1.654c-0.376-0.706-1.388-0.706-1.765,0L0.784,13.529C0.429,14.195,0.912,15,1.667,15 h12.667C15.088,15,15.571,14.195,15.216,13.529z M8,13c-0.552,0-1-0.448-1-1c0-0.552,0.448-1,1-1s1,0.448,1,1 C9,12.552,8.552,13,8,13z M9,10H7V6h2V10z"
+        ></path>
+      </g>
+    </svg>
+  );
+};
+const SuccessSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="16px"
+      height="16px"
+      viewBox="0 0 16 16"
+      class="s-right--med"
+    >
+      <g transform="translate(0, 0)">
+        <path
+          d="M15.637,2.162,8.137.02a.491.491,0,0,0-.274,0L.363,2.162A.5.5,0,0,0,0,2.643c0,10.41,7.753,13.3,7.832,13.328a.5.5,0,0,0,.336,0C8.247,15.943,16,13.053,16,2.643A.5.5,0,0,0,15.637,2.162ZM10.274,10.5,8,9.3,5.726,10.5l.435-2.531L4.319,6.174l2.544-.369L8,3.5l1.137,2.3,2.544.369-1.842,1.8Z"
+          fill="#53cb83"
+        ></path>
+      </g>
+    </svg>
+  );
+};
+const QuestionMarkSVG = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM8 13C7.4 13 7 12.6 7 12C7 11.4 7.4 11 8 11C8.6 11 9 11.4 9 12C9 12.6 8.6 13 8 13ZM9.5 8.4C9 8.7 9 8.8 9 9V10H7V9C7 7.7 7.8 7.1 8.4 6.7C8.9 6.4 9 6.3 9 6C9 5.4 8.6 5 8 5C7.6 5 7.3 5.2 7.1 5.5L6.6 6.4L4.9 5.4L5.4 4.5C5.9 3.6 6.9 3 8 3C9.7 3 11 4.3 11 6C11 7.4 10.1 8 9.5 8.4Z"
+        fill="#46236D"
+      ></path>
+    </svg>
+  );
+};
 export {
   StarSVG,
   CupSVG,
@@ -1775,4 +1833,7 @@ export {
   RiskSVG,
   GrowthSVG,
   WorkLoadSVG,
+  AllertSVG,
+  SuccessSVG,
+  QuestionMarkSVG,
 };
