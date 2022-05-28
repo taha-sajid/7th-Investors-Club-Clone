@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 import {
   NavLogoMobile,
   NavLogoLargeScreen,
@@ -11,6 +12,7 @@ const Index = () => {
 
   function disableBodyScroll() {
     document.getElementsByTagName("body")[0].classList.add("stop-scroll");
+    // document.getElementsByName("body").classList.add("blu")
   }
   function enableBodyScroll() {
     document.getElementsByTagName("body")[0].classList.remove("stop-scroll");
@@ -39,7 +41,8 @@ const Index = () => {
           <div className="nav-logo-menu">
             <div className="nav-logo">
               <Link to={"/"}>
-                Investors<span>club </span>
+                {/* Investors<span>club </span> */}
+                <NavLogoLargeScreen />
               </Link>
               <div className="logo-small-screen">
                 <Link to={"/"}>

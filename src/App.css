@@ -59,6 +59,7 @@
   border-bottom: 3px solid var(--color-primary-dark);
   box-shadow: #2f004f42 0px 10px 15px -3px, #2f004f96 0px 4px 6px -2px;
   transition: 0.2s;
+  font-weight: 900;
 }
 
 .btn-primary:hover {
@@ -91,3 +92,5 @@
   font-size: 0.8rem;
   padding: 1rem 3rem;
 }
+
+

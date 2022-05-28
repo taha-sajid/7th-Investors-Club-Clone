@@ -88,8 +88,20 @@
   border-radius: 0.5rem;
   box-shadow: 0px 26px 46px 1px rgba(128, 128, 128, 0.377);
 }
-
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
+  .analyze-section {
+    padding: 0rem 1.5rem;
+    padding-bottom: 5rem;
+  }
+  .analyze-data-container {
+    flex-direction: column;
+  }
+  .analyze-slogon p {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .analyze-sidebar {
     margin-top: 4rem;
   }

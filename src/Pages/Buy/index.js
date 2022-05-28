@@ -8,6 +8,8 @@ import Highlight from "../../components/Highlight";
 import ShowKindness from "../../components/ShowKindness";
 import cardData from "../../assets/RequiredData/BuyPageLatestEditionData";
 import Analyze from "../../components/Analyze";
+import JoinUsToday from "../../components/JoinUsToday";
+import CompareUs from "../../components/CompareUs";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
@@ -31,6 +33,8 @@ const Buy = () => {
         <ShowKindness />
         <Analyze />
       </div>
+      <JoinUsToday />
+      <CompareUs />
     </>
   );
 };

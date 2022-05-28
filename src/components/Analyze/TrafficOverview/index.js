@@ -3,7 +3,7 @@ import "./TrafficOverview.css";
 import { Line, Chart } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
-const index = () => {
+const Index = () => {
   const taha = React.createRef();
   console.log(taha);
 
@@ -64,24 +64,52 @@ const index = () => {
       </div>
       <div className="graph-container">
         <div className="graph-buttons">
-          <div className="graph-button">
-            <h4>View data as</h4>
-            <button className="btn-primary-light">graph</button>
-            <button className="btn-primary-light">table</button>
-          </div>
-          <div className="graph-button">
-            <h4>Group data by</h4>
+          <div className="graph-button-wrapper">
+            <div className="graph-button">
+              <h4>View data as</h4>
+                <button className="btn-primary-light btn-active">graph</button>
+                <button className="btn-primary-light">table</button>
+            </div>
+            <div className="graph-button">
+              <h4>Group data by</h4>
 
-            <button className="btn-primary-light">weeks</button>
-            <button className="btn-primary-light">months</button>
+              <button className="btn-primary-light">weeks</button>
+              <button className="btn-primary-light btn-active">months</button>
+            </div>
+          </div>
+          <div className="graph-input-data">
+            <select id="cars" name="carlist" form="carform">
+              <option value="TotalPageViews">Total pageviews</option>
+              <option value="UniquePageViews">Unique pageviews </option>
+              <option value="TotalUsers">Total users</option>
+              <option value="NewUsers">New users</option>
+              <option disabled value="sochengay">
+                Top pages (premium only)
+              </option>
+              <option value="TopChannels">Top channels</option>
+              <option disabled value="Sochengay">
+                Organic landing page (Premium only)
+              </option>
+              <option value="TopCountries">Top countries</option>
+              <option value="Devices">Devices</option>
+            </select>
           </div>
         </div>
+
         <div className="graph">
           <Line ref={taha} data={data} options={config} />
+        </div>
+
+        <div className="graph-comparison-dates">
+          <div className="container">
+            <input type="checkbox" checked={true && "checked"} />
+            <span className="checkmark"></span>
+          </div>
+          <p> Show Comparison Dates</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default index;
+export default Index;

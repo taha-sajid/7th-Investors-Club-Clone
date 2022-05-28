@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { PolygonSVG } from "../../assets/RequiredData/Svgs";
 import "./Analyze.css";
 import FinancialOverview from "./FinancialOverview";
 import TrafficOverview from "./TrafficOverview";
 import BusinessAnalysis from "./BusinessAnalysis";
 import SiteInformation from "./SiteInformation";
-const index = () => {
+const Index = () => {
+  const [openFinance, setOpenFinance] = useState(false);
+  const [openTraffic, setOpenTraffic] = useState(true);
+  const [openBusiness, setOpenBusiness] = useState(false);
+  const [openSiteInformation, setOpenSiteInformation] = useState(false);
+  // console.log(openFinance, "finance");
+  // console.log(openTraffic, "traffic");
+  // console.log(openBusiness, "business");
+  // console.log(openSiteInformation, "siteInformation");
   return (
     <>
       <div className="analyze-section">
@@ -14,12 +22,66 @@ const index = () => {
             <div className="analyze-sidebar">
               <h4>what's covered?</h4>
               <ul>
-                <li className="analyze-sidebar-list">finance overview</li>
-                <li className="analyze-sidebar-list">traffic overview</li>
-                <li className="analyze-sidebar-list active-sidebar">
+                <li
+                  className={
+                    openFinance
+                      ? "analyze-sidebar-list active-sidebar"
+                      : "analyze-sidebar-list"
+                  }
+                  onClick={() => {
+                    setOpenFinance(true);
+                    setOpenSiteInformation(false);
+                    setOpenBusiness(false);
+                    setOpenTraffic(false);
+                  }}
+                >
+                  finance overview
+                </li>
+                <li
+                  className={
+                    openTraffic
+                      ? "analyze-sidebar-list active-sidebar"
+                      : "analyze-sidebar-list"
+                  }
+                  onClick={() => {
+                    setOpenFinance(false);
+                    setOpenSiteInformation(false);
+                    setOpenBusiness(false);
+                    setOpenTraffic(true);
+                  }}
+                >
+                  traffic overview
+                </li>
+                <li
+                  className={
+                    openBusiness
+                      ? "analyze-sidebar-list active-sidebar"
+                      : "analyze-sidebar-list"
+                  }
+                  onClick={() => {
+                    setOpenFinance(false);
+                    setOpenSiteInformation(false);
+                    setOpenBusiness(true);
+                    setOpenTraffic(false);
+                  }}
+                >
                   business analysis
                 </li>
-                <li className="analyze-sidebar-list">site information</li>
+                <li
+                  className={
+                    openSiteInformation
+                      ? "analyze-sidebar-list active-sidebar"
+                      : "analyze-sidebar-list"
+                  }
+                  onClick={() => {
+                    setOpenFinance(false);
+                    setOpenSiteInformation(true);
+                    setOpenBusiness(false);
+                    setOpenTraffic(false);
+                  }}
+                >
+                  site information
+                </li>
               </ul>
             </div>
             <div className="analyze-info-container">
@@ -27,16 +89,31 @@ const index = () => {
                 <i>
                   <PolygonSVG />
                 </i>
-                <p>
-                  Analyze trends in page views and unique visitors with notes
-                  explaining any shifts.
-                </p>
+                {openFinance && (
+                  <p>
+                    See a clear history of revenue, expenses, and sources of
+                    monetization that you can trust.
+                  </p>
+                )}
+                {openTraffic && (
+                  <p>
+                    Analyze trends in page views and unique visitors with notes
+                    explaining any shifts.
+                  </p>
+                )}
+                {openBusiness && <p>Business overview text.</p>}
+                {openSiteInformation && (
+                  <p>
+                    Exprienced SEOs asses domain strength, content quality,
+                    backlinks, wayback history, and more.
+                  </p>
+                )}
               </div>
               <div className="analyze-info">
-                {false && <FinancialOverview />}
-                {true && <TrafficOverview />}
-                {false && <BusinessAnalysis />}
-                {false && <SiteInformation />}
+                {openFinance && <TrafficOverview />}
+                {openTraffic && <TrafficOverview />}
+                {openBusiness && <BusinessAnalysis />}
+                {openSiteInformation && <SiteInformation />}
               </div>
             </div>
           </div>
@@ -46,4 +123,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
