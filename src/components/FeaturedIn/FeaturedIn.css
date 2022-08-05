@@ -1,0 +1,21 @@
+.featured-in-container {
+  background: #530d85;
+  /* background-color: var(--color-primary); */
+  padding: 1.5rem 3rem;
+
+  margin-top: -1.5rem;
+}
+
+.featured-in-container .heading h4 {
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.featured-in-container .heading .companies {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.featured-in-container .heading .companies i .icon{
+  opacity: .4;
+}

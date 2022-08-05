@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import BuyerHeaderData from "../../assets/RequiredData/BuyerHeaderData";
 import Cards from "../../components/Cards";
-import Features from "../../components/Features";
+import BuyerFeatures from "../../components/BuyerFeatures";
 import LatestEdition from "../../components/LatestEdition";
 import Highlight from "../../components/Highlight";
 import ShowKindness from "../../components/ShowKindness";
@@ -10,6 +10,8 @@ import cardData from "../../assets/RequiredData/BuyPageLatestEditionData";
 import Analyze from "../../components/Analyze";
 import JoinUsToday from "../../components/JoinUsToday";
 import CompareUs from "../../components/CompareUs";
+import PremiumServices from "../../components/PremiumServices";
+import Testimonials from "../../components/Testimonials";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
@@ -25,7 +27,7 @@ const Buy = () => {
         isHomeOpen={isHomeOpen}
       />
       <Cards />
-      <Features />
+      <BuyerFeatures />
       <div style={{ backgroundColor: "#f4f7ff" }}>
         <LatestEdition cardData={cardData} />
 
@@ -35,6 +37,9 @@ const Buy = () => {
       </div>
       <JoinUsToday />
       <CompareUs />
+      <Testimonials />
+      <PremiumServices />
+      <JoinUsToday />
     </>
   );
 };

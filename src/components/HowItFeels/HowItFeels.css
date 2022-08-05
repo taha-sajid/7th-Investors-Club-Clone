@@ -1,0 +1,43 @@
+.how-it-feels-container {
+  padding: 7rem 3rem;
+  background-color: var(--background-color);
+  max-width: 85rem;
+  margin: 0 auto;
+}
+.how-it-feels-container .heading {
+  width: 35%;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.how-it-feels-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.how-it-feels-container .cards .card {
+  display: flex;
+  /* align-items: center; */
+  width: 48%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.how-it-feels-container .cards .card img {
+  width: 15%;
+}
+.how-it-feels-container .cards .card .data {
+  margin-left: 2rem;
+}
+
+.how-it-feels-container .cards .card .data .heading {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.how-it-feels-container .cards .card .data .description {
+  color: var(--text-color);
+  line-height: 1.5rem;
+}

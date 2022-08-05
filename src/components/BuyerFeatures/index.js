@@ -1,5 +1,5 @@
 import React from "react";
-import "./Features.css";
+import "./BuyerFeatures.css";
 import cardData from "../../assets/RequiredData/FeaturesData";
 const index = () => {
   return (

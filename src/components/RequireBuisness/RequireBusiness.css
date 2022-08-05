@@ -1,0 +1,51 @@
+.require-business-container {
+  background-color: var(--background-color);
+  padding: 5rem 3rem;
+}
+.require-business-container .heading {
+  color: var(--color-primary);
+  text-align: center;
+}
+.require-business-container .heading h1 {
+  font-weight: 900;
+}
+.require-business-container .cards {
+  display: flex;
+  margin-top: 7rem;
+  justify-content: space-between;
+  position: relative;
+}
+.require-business-container .cards .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.require-business-container .cards .card {
+  width: 20rem;
+  padding: 3rem 2rem;
+  background: url("https://investors.club/static/media/smaller-card-pattern.0928ecc4.svg");
+  background-color: #411a72;
+  border-radius: 1rem;
+  color: var(--color-secondary);
+  position: relative;
+}
+.require-business-container .cards .card i {
+  position: absolute;
+  top: -2.5rem;
+  right: -1rem;
+}
+.require-business-container .cards .card p {
+  color: white;
+  text-align: left;
+  line-height: 1.5rem;
+}
+.require-business-container .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.require-business-container .buttons button {
+  text-transform: none;
+}

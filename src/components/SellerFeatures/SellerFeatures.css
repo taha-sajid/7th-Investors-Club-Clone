@@ -1,0 +1,66 @@
+.seller-features-container {
+  background-color: var(--background-color);
+  padding: 4rem 7rem;
+}
+
+.seller-features-heading {
+  max-width: 40rem;
+  color: var(--color-primary);
+}
+.seller-features-card-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.seller-features-card {
+  background-color: white;
+  width: 31%;
+  border-radius: 1rem;
+  padding: 4.5rem 2.2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.seller-features-card img {
+  position: absolute;
+  top: -2.5rem;
+}
+.seller-features-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.seller-features-card p {
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.seller-features-card h4 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  color: rgb(116, 114, 114);
+}
+
+.highlight-container h2 {
+  color: white;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 2rem;
+}
+.highlight-buttons {
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.highlight-buttons button {
+  box-shadow: none;
+}
+.highlight-buttons button:hover {
+  box-shadow: none;
+}
