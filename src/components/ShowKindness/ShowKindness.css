@@ -32,8 +32,12 @@
   }
   .show-kindness-section h1 {
     width: 100%;
+    font-size: 1.4rem;
   }
   .show-kindness {
     width: 100%;
+  }
+  .show-kindness span {
+    font-size: 0.9rem;
   }
 }

@@ -8,7 +8,7 @@ const index = () => {
   return (
     <section className="join-us-today-section">
       <div className="join-us-today-container">
-        <div className="join-us-today-heading">Join Investors Club Today</div>
+         <div className="join-us-today-heading">Join Investors Club Today</div>
         <div className="join-us-today-cards-container">
           <div className="join-us-today-card">
             <div className="card-header">

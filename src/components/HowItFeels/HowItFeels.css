@@ -1,6 +1,9 @@
+.how-it-feels-section {
+  background-color: var(--background-color);
+}
+
 .how-it-feels-container {
   padding: 7rem 3rem;
-  background-color: var(--background-color);
   max-width: 85rem;
   margin: 0 auto;
 }
@@ -47,10 +50,13 @@
   .how-it-feels-container {
     padding: 3rem 1.5rem;
   }
-.how-it-feels-container .heading{
-  font-size: .95rem;
-  width: 90%;
-}
+  .how-it-feels-container .heading {
+    width: 100%;
+  }
+  .how-it-feels-container .heading h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
   .how-it-feels-container .cards {
     flex-direction: column;
   }
@@ -74,6 +80,9 @@
     width: 100%;
     font-size: 1rem;
     /* background-color: chartreuse; */
+  }
+  .how-it-feels-container .cards .card .data .description {
+    font-size: 0.9rem;
   }
 }
 

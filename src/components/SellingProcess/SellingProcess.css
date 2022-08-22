@@ -1,6 +1,7 @@
 .selling-process-container {
   padding: 7rem 3rem;
   max-width: 85rem;
+  margin: 0 auto;
 }
 .selling-process-container .heading {
   width: 44%;
@@ -51,12 +52,12 @@
   }
   .selling-card h3 {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   .selling-card p {
     width: 100%;
     margin-top: 1rem;
-    font-size: 0 0.9rem;
+    font-size: 0.9rem;
   }
 }
 

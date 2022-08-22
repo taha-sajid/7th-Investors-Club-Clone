@@ -1,4 +1,10 @@
+.our-membership-section{
+
+}
+
 .our-membership-container {
+  max-width: 85rem;
+  margin: 0 auto;
   padding: 5rem 3rem;
 }
 .our-membership-container .heading {
@@ -10,7 +16,7 @@
 .our-membership-container .heading p {
   line-height: 1.7rem;
   font-size: 1.25rem;
-  width: 30rem;
+  max-width: 30rem;
   margin: 0 auto;
   margin-top: 1em;
   margin-bottom: 3.5rem;
@@ -125,7 +131,7 @@
   color: var(--color-primary);
 }
 
-@media only screen and (max-width: 543px) {
+@media only screen and (max-width: 992px) {
   .our-membership-container {
     padding: 3rem 1.5rem;
   }

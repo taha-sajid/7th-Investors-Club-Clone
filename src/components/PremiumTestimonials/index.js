@@ -3,7 +3,7 @@ import "./PremiumTestimonials.css";
 import { LeftArrowSVG, RightArrowSVG } from "../../assets/RequiredData/Svgs";
 const index = () => {
   return (
-    <>
+    <section className="premium-testimonials-section">
       <div className="premium-testimonials-container">
         <div className="testimonials">
           <div className="heading">
@@ -58,7 +58,7 @@ const index = () => {
         </p>
         <button className="btn-lg btn-secondary">I want in</button>
       </div>
-    </>
+    </section>
   );
 };
 

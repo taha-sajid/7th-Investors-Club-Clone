@@ -18,7 +18,7 @@ const index = () => {
             return (
               <div className="card">
                 <i>{icon}</i>
-                <div className="card-heading">
+                 <div className="card-heading">
                   <h3>{heading} </h3>
                 </div>
                 <div className="card-description">

@@ -1,6 +1,11 @@
-.premium-testimonials-container {
-  padding: 4.5rem 3rem;
+.premium-testimonials-section {
   background-color: var(--background-color);
+}
+
+.premium-testimonials-container {
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 4.5rem 3rem;
 }
 .premium-testimonials-container .heading {
   color: var(--color-primary);
@@ -99,7 +104,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 .real-state-investors h1 {
-  max-width: 60%;
+  max-width: 40rem;
   margin: 0 auto;
   text-align: center;
   font-weight: 900;

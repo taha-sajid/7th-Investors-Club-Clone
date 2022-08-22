@@ -1,7 +1,11 @@
+.premium-services-section{
+  background-color: var(--background-color);
+
+}
 .premium-services-container {
   max-width: 85rem;
+  margin: 0 auto;
   padding: 5rem 3rem;
-  background-color: var(--background-color);
 }
 
 .premium-services-heading {
@@ -33,8 +37,9 @@
 }
 .premium-services-card img {
   position: absolute;
-  top: -3.2rem;
-  left: 40%;
+  top: .3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .premium-services-card .card-heading {
   font-size: 1.25rem;
@@ -67,9 +72,9 @@
   text-align: center;
   margin: 1rem 0rem;
 }
-.card-highlights ul .icon{
+.card-highlights ul .icon {
   position: relative;
-} 
+}
 .card-highlights ul .icon::before {
   content: "";
   display: block;
@@ -82,4 +87,59 @@
   width: 5px;
   border-bottom: 1px solid #53cb83;
   border-right: 1px solid #53cb83;
+}
+
+@media only screen and (max-width: 992px) {
+  .premium-services-container {
+    padding: 3rem 1.5rem;
+  }
+  .premium-services-container .note {
+    font-size: 0.9rem;
+  }
+  .premium-services-container .premium-services-heading h1 {
+    font-size: 1.3rem;
+  }
+  .premium-services-card-container {
+    flex-direction: column;
+  }
+  .premium-services-card {
+    width: 100%;
+    padding: 1rem 3rem;
+    margin-bottom: 3rem;
+  }
+  .premium-services-card:last-child {
+    margin-bottom: 0;
+  }
+  .premium-services-card .card-heading {
+    font-size: 1rem;
+  }
+  .premium-services-card img {
+    height: 80px;
+  }
+  .premium-services-card .card-note {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  .premium-services-card .card-highlights {
+    font-size: 0.9rem;
+  }
+  .premium-services-card .card-button button {
+    margin-top: 1rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

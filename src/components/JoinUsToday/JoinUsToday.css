@@ -231,6 +231,7 @@ strike {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2.5rem;
   }
   .start-free-card p {
     font-size: 0.9rem;
@@ -280,6 +281,9 @@ strike {
 
   .join-us-today-card .card-data-features h1 {
     font-size: 1rem;
+  }
+  .join-us-today-container h4{
+    margin: 0;
   }
 }
 

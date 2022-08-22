@@ -1,5 +1,8 @@
-.is-site-fit-container {
+.is-site-fit-section{
+
   background-color: var(--background-color);
+}
+.is-site-fit-container {
   max-width: 85rem;
   margin: 0 auto;
   padding: 3rem 7rem;
@@ -29,7 +32,7 @@
 .is-site-fit-container .main-content .buttons button {
   font-weight: normal;
 }
-.btn {
+.is-site-fit-container .btn {
   background-color: var(--background-color);
   box-shadow: none;
   border: 1px solid var(--color-primary);
@@ -49,7 +52,7 @@
   margin-top: 5rem;
   gap: 1.5rem;
 }
-.main-content .card {
+.is-site-fit-container .main-content .card {
   width: 17rem;
   background-color: white;
   border-radius: 0.5rem;
@@ -58,7 +61,7 @@
   box-shadow: rgba(50, 50, 93, 0.11) 0px 50px 110px -20px,
     rgba(0, 0, 0, 0.3) 0px 10px 10px -30px;
 }
-.card span {
+.is-site-fit-container .main-content .cards .card span {
   background-color: var(--color-primary);
   color: white;
   height: 50px;
@@ -71,25 +74,28 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.card span p {
-  /* color: black; */
-  margin-top:-1rem;
+.is-site-fit-container .main-content .cards .card span p {
+  margin-top: -1rem;
   position: absolute;
-  top: -1.1rem;
+  top: 1.95rem;
   left: 1.3rem;
 }
-.card p {
+.is-site-fit-container.card p {
   margin-top: 1.8rem;
+  /* color: gray; */
   text-align: center;
   line-height: 1.3rem;
+
+
 }
 
 .is-site-fit-container .main-content p {
+  text-align: center;
   margin-top: 2rem;
 }
 
 /* Apply below 992px */
-@media only screen and (max-width:992px) {
+@media only screen and (max-width: 992px) {
   .is-site-fit-container {
     padding: 3rem 1.5rem;
   }

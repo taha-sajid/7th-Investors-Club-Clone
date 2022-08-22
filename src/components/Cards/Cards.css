@@ -21,7 +21,7 @@
 }
 .card-container {
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 .cards-section .cards .card {
@@ -57,14 +57,15 @@
   font-weight: 600;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .cards-section {
     padding: 0rem 1.5rem;
     padding-top: 3rem;
   }
   .cards-section .heading h1 {
-    width: 90%;
-    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
   }
   .card-container {
     flex-direction: column;
@@ -72,6 +73,7 @@
   }
   .cards-section .cards .card {
     width: 100%;
+    margin: 0;
     margin-bottom: 4rem;
   }
   .cards-section .cards .card .card-heading h3 {
@@ -79,10 +81,12 @@
     margin-bottom: 1.75rem;
   }
   .cards-section .cards .card .card-description p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    text-align: left;
   }
   .cards-section .cards .card .card-note {
     font-size: 0.95rem;
     font-weight: 600;
+    text-align: left;
   }
 }

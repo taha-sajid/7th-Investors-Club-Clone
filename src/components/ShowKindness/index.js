@@ -12,7 +12,7 @@ const index = () => {
         </span>
         <span>
           Our veteran auditors and SEOs invest 5+ hours into building
-          comprehensive reports, so you can just click, review, invest.{" "}
+          comprehensive reports, so you can just click, review, invest.
         </span>
         <span> See what you get below:</span>
       </p>

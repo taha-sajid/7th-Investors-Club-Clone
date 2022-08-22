@@ -43,8 +43,21 @@
   line-height: 1.3rem;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
+  .features-section {
+    padding: 3rem 1.5rem;
+  }
+  .features-section .heading h1 {
+    font-size: 1.4rem;
+  }
   .features-card {
     width: 100%;
+    margin-bottom: 2rem;
+  }
+  .features-card p {
+    font-size: 0.9rem;
+  }
+  .features-container button {
+    margin-top: 0;
   }
 }

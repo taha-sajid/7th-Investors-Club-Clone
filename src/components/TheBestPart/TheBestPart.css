@@ -1,10 +1,14 @@
-.the-best-part-container {
+.the-best-part-section {
   background: linear-gradient(#4a1172b7, #4a1182a9),
     url("https://investors.club/static/media/pattern-1.e467f39f.svg");
   background-size: 45rem;
   background-color: var(--color-primary);
+}
+.the-best-part-container {
   display: flex;
   padding: 7rem 3rem;
+  max-width: 85rem;
+  margin: 0 auto;
 }
 .the-best-part-container .heading {
   width: 60%;
@@ -71,17 +75,30 @@
     width: 90%;
   }
   .the-best-part-container .heading h4 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+  .the-best-part-container .heading p {
+    font-size: 1.1rem;
   }
   .the-best-part-container .section-data {
     width: 100%;
     margin-top: 2.5rem;
+    font-size: 0.9rem;
   }
   .the-best-part-container .section-data .points {
     margin: 2.5rem 0rem;
   }
-  .the-best-part-container .section-data .buttons{
+  .the-best-part-container .section-data .buttons {
     flex-direction: column;
+  }
+  .the-best-part-container .section-data p i {
+    margin-right: 0.5rem;
+  }
+  .the-best-part-container .section-data strong {
+    font-weight: 900;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 0.6rem;
   }
 }
 
