@@ -19,7 +19,7 @@ const index = () => {
                 We're happy to hop on a call to discuss. Ultimately, you call
                 the shots.
               </span>
-            </p>
+            </p> 
           </div>
           <div className="selling-card">
             <h3>Guidance through the process</h3>

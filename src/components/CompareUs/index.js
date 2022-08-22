@@ -11,7 +11,7 @@ const Index = () => {
       <div className="compare-us-container">
         <div className="compare-us-heading">
           <h1>Go ahead: compare us to the “Other Guys“</h1>
-          <p>We knew we were onto something when they started copying us.</p>
+           <p>We knew we were onto something when they started copying us.</p>
         </div>
         <div className="compare-us-cards-container">
           <div className="versus-container">

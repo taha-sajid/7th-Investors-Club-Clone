@@ -49,3 +49,45 @@
 .require-business-container .buttons button {
   text-transform: none;
 }
+
+@media only screen and (max-width: 543px) {
+  .require-business-container {
+    padding: 4rem 1.5rem;
+  }
+  .require-business-container .heading h1 {
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+  .require-business-container .cards {
+    flex-direction: column;
+  }
+  .require-business-container .cards .card {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .require-business-container .cards .card:last-child {
+    margin-bottom: 0;
+  }
+  .require-business-container .cards .card i {
+    right: 1rem;
+  }
+  .require-business-container .buttons {
+    margin-top: 2rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

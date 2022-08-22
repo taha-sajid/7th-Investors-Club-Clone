@@ -34,7 +34,7 @@
   margin-right: 1rem;
 }
 .the-best-part-container .section-data .points {
-  margin: 2rem 1vrem;
+  margin: 2rem 1rem;
 }
 .the-best-part-container .section-data .points i,
 .the-best-part-container .section-data .points {
@@ -59,4 +59,41 @@
 .section-data .buttons button:last-child:hover {
   color: var(--color-primary);
   background-color: var(--color-secondary);
+}
+
+/* Apply below 768px */
+@media only screen and (max-width: 768px) {
+  .the-best-part-container {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+  }
+  .the-best-part-container .heading {
+    width: 90%;
+  }
+  .the-best-part-container .heading h4 {
+    font-size: 1.3rem;
+  }
+  .the-best-part-container .section-data {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+  .the-best-part-container .section-data .points {
+    margin: 2.5rem 0rem;
+  }
+  .the-best-part-container .section-data .buttons{
+    flex-direction: column;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) and (min-width: 544px) {
+}
+
+/* Apply above 992px */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

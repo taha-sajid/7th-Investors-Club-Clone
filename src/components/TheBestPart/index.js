@@ -18,7 +18,7 @@ const index = () => {
           They won't mention it, but other brokers lock you into 6-month
           contracts. Sell anywhere else, and you still owe them
           <strong> the full fee as a penalty!</strong>
-        </p>
+        </p> 
         <p>
           Not only are our exclusivity agreements half the length, but our fees
           are up to 3x lower.

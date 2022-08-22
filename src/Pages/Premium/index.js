@@ -5,6 +5,7 @@ import FeaturedIn from "../../components/FeaturedIn";
 import OurMemberShip from "../../components/OurMemberShip";
 import RequireBusiness from "../../components/RequireBuisness";
 import PremiumTestimonials from "../../components/PremiumTestimonials";
+import FAQs from "../../components/FAQs";
 const Premium = () => {
   const { slogon, heading, buttons, isHomeOpen, features, headerImage } =
     PremiumHeaderData;
@@ -24,6 +25,7 @@ const Premium = () => {
       <RequireBusiness />
       <OurMemberShip />
       <PremiumTestimonials/>
+      <FAQs/>
     </div>
   );
 };

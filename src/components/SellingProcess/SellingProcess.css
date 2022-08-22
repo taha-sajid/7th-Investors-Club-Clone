@@ -3,7 +3,7 @@
   max-width: 85rem;
 }
 .selling-process-container .heading {
-  width: 38%;
+  width: 44%;
   color: var(--color-primary);
 }
 .selling-cards {
@@ -32,6 +32,43 @@
   line-height: 1.3rem;
 }
 .selling-card span {
-    display: block;
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Apply below 992px */
+@media only screen and (max-width: 992px) {
+  .selling-process-container {
+    padding: 4rem 1.5rem;
+  }
+  .selling-process-container .heading {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .selling-card {
+    width: 100%;
+    flex-direction: column;
+  }
+  .selling-card h3 {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .selling-card p {
+    width: 100%;
     margin-top: 1rem;
+    font-size: 0 0.9rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) and (min-width: 544px) {
+}
+
+/* Apply above 992px */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

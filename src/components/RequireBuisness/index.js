@@ -13,7 +13,7 @@ const index = () => {
         <h1> Everything you need to acquire a business with confidence</h1>
       </div>
 
-      <div className="cards">
+      <div className="cards"> 
         <i className="line">
           <BeautifullLineSVG />
         </i>

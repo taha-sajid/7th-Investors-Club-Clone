@@ -21,6 +21,7 @@
 }
 .our-membership-container .main-content .buttons {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .our-membership-container .main-content .buttons button {
@@ -41,6 +42,7 @@
   font-weight: 400;
   color: var(--text-color);
   letter-spacing: 1px;
+  padding: 0.5rem 4rem;
 }
 .our-membership-container .main-content .buttons button:last-child:hover {
   border-bottom: 3px solid rgba(128, 128, 128, 0.678);
@@ -121,4 +123,56 @@
   cursor: pointer;
   padding: 1rem;
   color: var(--color-primary);
+}
+
+@media only screen and (max-width: 543px) {
+  .our-membership-container {
+    padding: 3rem 1.5rem;
+  }
+  .our-membership-container .heading h1 {
+    font-size: 1.5rem;
+  }
+  .our-membership-container .heading p {
+    font-size: 1rem;
+  }
+  .our-membership-container .main-content .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .our-membership-container .main-content .buttons button {
+    padding: 0.5rem 3rem;
+  }
+  .our-membership-container .main-content .buttons button:last-child {
+    padding: 0.5rem 3rem;
+  }
+  .our-membership-container
+    .main-content
+    .main-data
+    .package-details
+    .table-row:first-child {
+    display: none;
+  }
+  .our-membership-container .main-content .main-data .badge {
+    background-color: var(--color-secondary);
+  }
+  .hidden{
+    display: none;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

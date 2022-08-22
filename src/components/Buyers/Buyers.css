@@ -129,6 +129,7 @@
     font-size: 0.8rem;
     line-height: 1.2rem;
   }
+
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -165,9 +166,6 @@
   }
   .features-card .features-data button {
     margin-left: 0;
-  }
-  .features-data button {
-    margin-left: -1rem;
   }
   .features-data p {
     font-size: 0.75rem;

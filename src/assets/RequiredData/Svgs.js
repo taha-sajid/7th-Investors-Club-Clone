@@ -2635,6 +2635,26 @@ const RightArrowSVG = () => {
     </svg>
   );
 };
+
+const Arrow = () => {
+  return (
+    <svg
+      width="12"
+      height="5"
+      viewBox="0 0 12 5"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="checkout-subscription__faq-item__icon s-left--sml is-active"
+    >
+      <path
+        d="M0.5 0.5L6 4.5L11.5 0.5"
+        stroke="#4A1172"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  );
+};
 export {
   StarSVG,
   CupSVG,
@@ -2687,4 +2707,5 @@ export {
   RoundCrossSVG,
   LeftArrowSVG,
   RightArrowSVG,
+  Arrow
 };

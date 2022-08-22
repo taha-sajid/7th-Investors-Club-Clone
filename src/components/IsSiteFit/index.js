@@ -10,7 +10,7 @@ const index = () => {
         />
         <h1>Is your site a fit for Investors Club?</h1>
         <p className="slogon">Our criteria are simple:</p>
-      </div>
+       </div>
       <div className="main-content">
         <div className="buttons">
           <button className="btn-primary">for content sites</button>
@@ -30,7 +30,7 @@ const index = () => {
               <p> 2 </p>
             </span>
             <p>
-              Minimum <strong> $500/mo </strong> in revenue
+              Minimum <strong> $500/mo </strong> <div> in revenue</div>
             </p>
           </div>
           <div className="card">

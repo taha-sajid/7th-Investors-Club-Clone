@@ -3,7 +3,7 @@ import "./HowItWorks.css";
 const index = () => {
   return (
     <div className="how-it-works-container">
-      <h2>How does it Works?</h2>
+      <h2>How does it Work?</h2>
       <p className="slogon">
         Selling your business with Investors Club is simple, fast, and fair.
       </p>

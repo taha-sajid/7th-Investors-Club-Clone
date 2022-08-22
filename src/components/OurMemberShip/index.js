@@ -16,7 +16,7 @@ const index = () => {
           <button className="btn-secondary">Annual</button>
           <button className="btn-secondary">lifetime</button>
         </div>
-        <div className="main-data">
+        <div className="main-data hidden">
           <div className="package-details">
             {data.map((mydata, index) => {
               const { data, id, badge } = mydata;
@@ -31,7 +31,7 @@ const index = () => {
         </div>
       </div>
       <div className="buttons">
-        <button className="btn-secondary btn-lg" >upgrade</button>
+        <button className="btn-secondary btn-lg">upgrade</button>
         <button>Register here to get access.</button>
       </div>
     </div>
