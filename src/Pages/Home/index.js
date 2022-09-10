@@ -10,6 +10,7 @@ import FreeResources from "../../components/FreeResources";
 import Header from "../../components/Header";
 import HomeHeaderData from "../../assets/RequiredData/HomeHeaderData";
 import cardData from "../../assets/RequiredData/LatestEditionCardData";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const Home = () => {
   const {
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Header
         heading={heading}
         note={note}

@@ -10,11 +10,13 @@ import IsSiteFit from "../../components/IsSiteFit";
 import SellingProcess from "../../components/SellingProcess";
 import HowItFeels from "../../components/HowItFeels";
 import TheBestPart from "../../components/TheBestPart";
+import ScrollToTop from "../../components/ScrollToTop";
 const Sell = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     SellerHeaderData;
   return (
     <div>
+      <ScrollToTop />
       <Header
         heading={heading}
         features={features}

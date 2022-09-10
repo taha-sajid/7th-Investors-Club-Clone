@@ -12,12 +12,14 @@ import JoinUsToday from "../../components/JoinUsToday";
 import CompareUs from "../../components/CompareUs";
 import PremiumServices from "../../components/PremiumServices";
 import Testimonials from "../../components/Testimonials";
+import ScrollToTop from "../../components/ScrollToTop";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
 
   return (
     <>
+      <ScrollToTop />
       <Header
         heading={heading}
         features={features}
