@@ -51,7 +51,7 @@ const Footer = () => {
             Copyright 2022 by Investors Club LLC. All rights reserved. <br /> A part of
             the Sharp Capital Group.
           </p>
-          <h5>Version: v2.55.4</h5>
+          <h5>Version: v4.19.0</h5>
         </div>
       </div>
       <div className="footer-bottom-line">

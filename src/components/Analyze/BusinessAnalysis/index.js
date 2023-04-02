@@ -30,9 +30,6 @@ const index = () => {
         })}
         <div className="business-analysis-data">
           <div className="business-analysis-data-heading">
-            {/* <i>
-              <NicheSVG />
-            </i> */}
             <h2> Earnings potential</h2>
           </div>
           <div className="business-analysis-data-content">

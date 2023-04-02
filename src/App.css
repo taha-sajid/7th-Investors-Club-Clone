@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+
 /* width
 /* ::-webkit-scrollbar {
   width: .8rem;
@@ -43,7 +45,9 @@
   --dark-text: #2f2f30;
   --color-danger: #d84a4a;
   --color-success: #53cb83;
+  --color: #c5baba;
 }
+
 .btn-primary {
   background: none;
   border: none;
@@ -66,6 +70,7 @@
   box-shadow: #2f004f 0px 15px 20px -12px;
   background-color: var(--btn-primary-hover-color);
 }
+
 .btn-secondary {
   background: none;
   border: none;
@@ -82,12 +87,83 @@
   transition: 0.2s;
   font-weight: 900;
 }
+
 .btn-secondary:hover {
   transform: translateY(-2px);
   box-shadow: #c79333 0px 15px 20px -12px;
   background-color: var(--btn-secondary-hover-color);
 }
+
+.btn-ghost {
+  background-color: transparent;
+  color: #4a1172;
+  color: var(--color);
+  border: none;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: none;
+  transition: all .2s ease-in-out;
+}
+
+.btn-ghost:hover {
+  background-color: #2f004f21;
+  box-shadow: none;
+
+}
+
+.btn-neutral--outline {
+  background: transparent;
+  border: 1px solid var(--dark-text);
+  border-radius: .5rem;
+  padding: .5rem 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  box-shadow: none;
+  opacity: .5;
+  transition: .2s ease-in-out;
+}
+
+.btn-neutral--outline:hover {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  opacity: 1;
+}
+
+
 .btn-lg {
   font-size: 0.8rem;
   padding: 1rem 3rem;
+}
+
+.notice {
+  font-size: 14px;
+  line-height: 20px;
+  color: #786f82;
+  padding: 8px 16px
+}
+
+.notice--warning {
+
+  border-left: 2px solid #d84a4a;
+  background: rgba(216, 74, 74, .1)
+}
+
+.notice--note {
+  border-left: 2px solid #fec45c;
+  background: rgba(254, 196, 92, .1);
+}
+
+
+input {
+
+  padding: .6rem .95rem;
+  border-radius: .35rem;
+  border: 1px solid var(--text-color);
+  background-image: linear-gradient(to right, rgb(232, 240, 254), rgba(70, 90, 126, 0.034));
+  cursor: pointer;
+}
+
+::placeholder {
+  color: var(--color);
 }

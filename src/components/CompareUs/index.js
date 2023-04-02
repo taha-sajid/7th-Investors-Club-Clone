@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  NavLogoLargeScreen,
+  NavLogoLargeScreenWhite,
   TickSVG,
   CrossSVG,
 } from "../../assets/RequiredData/Svgs";
@@ -19,7 +19,7 @@ const Index = () => {
           </div>
           <div className="compare-us-card">
             <h3 className="card-heading">
-              <NavLogoLargeScreen />
+              <NavLogoLargeScreenWhite />
             </h3>
             <div className="compare-card-data">
               <p>

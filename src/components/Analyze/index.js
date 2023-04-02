@@ -6,14 +6,12 @@ import TrafficOverview from "./TrafficOverview";
 import BusinessAnalysis from "./BusinessAnalysis";
 import SiteInformation from "./SiteInformation";
 const Index = () => {
+  // States for graph that show on buy page
   const [openFinance, setOpenFinance] = useState(false);
   const [openTraffic, setOpenTraffic] = useState(true);
   const [openBusiness, setOpenBusiness] = useState(false);
   const [openSiteInformation, setOpenSiteInformation] = useState(false);
-  // console.log(openFinance, "finance");
-  // console.log(openTraffic, "traffic");
-  // console.log(openBusiness, "business");
-  // console.log(openSiteInformation, "siteInformation");
+
   return (
     <>
       <div className="analyze-section">

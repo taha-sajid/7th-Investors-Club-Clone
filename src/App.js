@@ -1,7 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 // import TopNav from "./components/TopNav"
-import Navbar from "./components/Navbar";
+import Login from "./components/Login";
+import Registeration from "./Pages/Registeration";
 import Buy from "./Pages/Buy";
 import Home from "./Pages/Home";
 import Premium from "./Pages/Premium";
@@ -27,6 +28,8 @@ function App() {
         <Route path="/buy-online-business" element={<Buy />} />
         <Route path="/sell-your-website" element={<Sell />} />
         <Route path="/premium" element={<Premium />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registeration />} />
       </Routes>
       {/* <Buy /> */}
       {/* <Sell /> */}

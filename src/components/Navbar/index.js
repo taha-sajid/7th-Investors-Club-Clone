@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import {
-  NavLogoMobile,
-  NavLogoLargeScreen,
+  NavLogoMobileWhite,
+  NavLogoMobileBlue,
+  NavLogoLargeScreenWhite,
+  NavLogoLargeScreenBlue,
 } from "../../assets/RequiredData/Svgs";
 
 const Index = () => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const [isLoginActive, setIsLoginActive] = useState(false);  
 
   function disableBodyScroll() {
     document.getElementsByTagName("body")[0].classList.add("stop-scroll");
@@ -21,7 +24,9 @@ const Index = () => {
     if (isNavActive) disableBodyScroll();
     else enableBodyScroll();
   }, [isNavActive]);
-
+  const setLogin = (e) => {
+    setIsLoginActive((state) => !state);
+  };
   return (
     <>
       <nav className={isNavActive ? "navigation nav-active" : "navigation"}>
@@ -42,29 +47,62 @@ const Index = () => {
             <div className="nav-logo">
               <Link to={"/"}>
                 {/* Investors<span>club </span> */}
-                <NavLogoLargeScreen />
+                {isLoginActive ? (
+                  <NavLogoLargeScreenBlue />
+                ) : (
+                  <NavLogoLargeScreenWhite />
+                )}
               </Link>
               <div className="logo-small-screen">
                 <Link to={"/"}>
-                  <NavLogoMobile />
+                  {isLoginActive ? (
+                    <NavLogoMobileBlue />
+                  ) : (
+                    <NavLogoMobileWhite />
+                  )}
                 </Link>
               </div>
             </div>
             <div className="nav-menu">
-              <Link to={"/buy-online-business"} className="visited-link">
+              <Link
+                to={"/buy-online-business"}
+                className={
+                  isLoginActive
+                    ? "visited-link nav-menu-link-black"
+                    : "visited-link"
+                }
+              >
                 buy
               </Link>
-              <Link to={"/sell-your-website"} className="visited-link">
+              <Link
+                to={"/sell-your-website"}
+                className={
+                  isLoginActive
+                    ? "visited-link nav-menu-link-black"
+                    : "visited-link"
+                }
+              >
                 sell
               </Link>
-              <Link to={"/premium"} className="premium">
+              <Link to={"/premium"} className="premium ">
                 premium
               </Link>
             </div>
           </div>
           <div className="nav-btn">
-            <button className="btn-primary">Login</button>
-            <button className="btn-secondary">create free account</button>
+            <Link to={"/login"}>
+              <button
+                className={
+                  isLoginActive ? "btn-ghost nav-menu-link-black" : "btn-ghost"
+                }
+                onClick={() => setIsLoginActive((state) => !state)}
+              >
+                Login
+              </button>
+            </Link>
+            <Link to={"/register"}>
+              <button className="btn-secondary">create free account</button>
+            </Link>
           </div>
         </div>
       </nav>
