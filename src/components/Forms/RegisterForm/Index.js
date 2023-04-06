@@ -163,16 +163,16 @@ const Index = () => {
           </div>
         </div>
 
-        <button
-          className={`btn-lg btn-primary ${isValid ? "" : "btn-disabled"}`}
-          type="submit"
-          disabled={!isValid}
-          onClick={() => {}}
-        >
-          <Link to={"/additional-info"} disabled={!isValid}>
+        <Link to={"/additional-info"} disabled={!isValid}>
+          <button
+            className={`btn-lg btn-primary ${isValid ? "" : "btn-disabled"}`}
+            type="submit"
+            disabled={!isValid}
+            onClick={() => {}}
+          >
             Next Step
-          </Link>
-        </button>
+          </button>
+        </Link>
       </form>
     </>
   );
