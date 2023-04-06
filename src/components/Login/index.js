@@ -3,8 +3,11 @@ import "./login.css";
 import Navbar from "../Navbar";
 import { useFormik } from "formik";
 import { loginSchema } from "../../Schema/LoginSchema";
+import { useSelector } from "react-redux";
 
 const Index = () => {
+  const { isLoading } = useSelector((state) => state.auth);
+  console.log("isLoading is", isLoading);
   const initialValues = {
     email: "",
     password: "",

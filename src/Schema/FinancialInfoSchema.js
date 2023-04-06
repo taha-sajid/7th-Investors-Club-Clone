@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const signUpSchema = Yup.object({
+export const FinancialInfoSchema = Yup.object({
   name: Yup.string()
     .min(4, "The value you entered isn't valid.")
     .max(25)

@@ -1,16 +1,48 @@
 import React from "react";
 import "./AdditionalInfoForm.css";
 import ButtonWithIcon from "../../ButtonWitIcon/Index";
-const Index = (props) => {
+import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import { AdditionalInfoSchema } from "../../../Schema/AdditionalInfoSchema";
+const Index = ({
+  ques1,
+  ques1Options,
+  ques2,
+  ques2Options,
+  registerReferal,
+  sublbl,
+  button,
+}) => {
+  const initialValues = {
+    referalData: "",
+    email: "",
+    password: "",
+    confirm_password: "",
+    phoneNumber: "",
+  };
   const {
-    ques1,
-    ques1Options,
-    ques2,
-    ques2Options,
-    registerReferal,
-    sublbl,
-    button,
-  } = props.formData.headerData;
+    values,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    errors,
+    touched,
+    isValid,
+  } = useFormik({
+    initialValues,
+    validationSchema: AdditionalInfoSchema,
+    validateOnChange: true,
+    validateOnBlur: true,
+    validateOnMount: true,
+    //// By disabling validation onChange and onBlur formik will validate on submit.
+    onSubmit: (values, action) => {
+      console.log(values);
+      //// to get rid of all the values after submitting the form
+      action.resetForm();
+    },
+  });
+  console.log(isValid);
+
   return (
     <>
       <form
@@ -51,13 +83,15 @@ const Index = (props) => {
           <div className="buttons-container">
             {button.map((val, index) => {
               return (
-                <button
-                  className="btn-lg btn-primary btn-next"
-                  type="submit"
-                  key={index}
-                >
-                  {val}
-                </button>
+                <Link to={"/financial-info"}>
+                  <button
+                    className="btn-lg btn-primary btn-next"
+                    type="submit"
+                    key={index}
+                  >
+                    {val}
+                  </button>
+                </Link>
               );
             })}
           </div>

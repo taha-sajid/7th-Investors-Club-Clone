@@ -2,8 +2,7 @@
     max-width: 65%;
     width: 100%;
     margin: 0 auto;
-    margin-top: -4rem;
-
+    margin-top: -13rem;
 }
 
 .form-section {
@@ -62,22 +61,30 @@
 
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
-    .form-container{
+    .form-container {
         max-width: 100%;
     }
+
     .form-section {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
         width: 100%;
+        border-radius: .5rem;
     }
-    .additional-info-form-container .question-container{
+
+    .additional-info-form-container .question-container {
         margin-top: 0rem;
     }
+
     .register-form-container {
         max-width: 100%;
     }
 
     .register-form-container .form-section {
         padding-bottom: 2rem;
+    }
+
+    .login-form-container .login-form .login-form-footer {
+        font-size: .75rem;
     }
 }
 

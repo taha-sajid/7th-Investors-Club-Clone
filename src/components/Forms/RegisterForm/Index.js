@@ -2,8 +2,9 @@ import React from "react";
 import "./RegisterForm.css";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../../Schema/signUpSchema";
+import { Link } from "react-router-dom";
 
-const Index = ({ button }) => {
+const Index = () => {
   const initialValues = {
     name: "",
     email: "",
@@ -11,22 +12,35 @@ const Index = ({ button }) => {
     confirm_password: "",
     phoneNumber: "",
   };
-  const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
-    useFormik({
-      initialValues,
-      validationSchema: signUpSchema,
-      validateOnChange: true,
-      validateOnBlur: true,
-      //// By disabling validation onChange and onBlur formik will validate on submit.
-      onSubmit: (values, action) => {
-        console.log(values);
-        //// to get rid of all the values after submitting the form
-        action.resetForm();
-      },
-    });
+  const {
+    values,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    errors,
+    touched,
+    isValid,
+  } = useFormik({
+    initialValues,
+    validationSchema: signUpSchema,
+    validateOnChange: true,
+    validateOnBlur: true,
+    validateOnMount: true,
+    //// By disabling validation onChange and onBlur formik will validate on submit.
+    onSubmit: (values, action) => {
+      console.log(values);
+      //// to get rid of all the values after submitting the form
+      action.resetForm();
+    },
+  });
+  // console.log(isValid);
+
   return (
     <>
-      <form onSubmit={handleSubmit} className="register-form-container form-container">
+      <form
+        onSubmit={handleSubmit}
+        className="register-form-container form-container"
+      >
         <div className="form-section">
           <h4>Your primary reason for registering?</h4>
           <div className="buttons-container">
@@ -149,13 +163,16 @@ const Index = ({ button }) => {
           </div>
         </div>
 
-        {button.map((val, index) => {
-          return (
-            <button className="btn-lg btn-primary" type="submit" key={index}>
-              {val}
-            </button>
-          );
-        })}
+        <button
+          className={`btn-lg btn-primary ${isValid ? "" : "btn-disabled"}`}
+          type="submit"
+          disabled={!isValid}
+          onClick={() => {}}
+        >
+          <Link to={"/additional-info"} disabled={!isValid}>
+            Next Step
+          </Link>
+        </button>
       </form>
     </>
   );

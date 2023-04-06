@@ -51,6 +51,6 @@ export const applicationCompleted = {
   stepsIndicator: [<BsCheck2 />, <BsCheck2 />, <BsCheck2 />, 4],
   stepName: `STEP 4: VERIFY YOUR ACCOUNT`,
   stepDescription: `Your application will be reviewed within 24 hours. Once approved, we’ll contact you via email with details to activate your account and start your subscription.`,
-  button: ["Update financial info", "Browse listings"],
+  headerButton: ["Update financial info", "Browse listings"],
   support: "Having issues? Please contact support@investors.club",
 };

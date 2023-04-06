@@ -1,22 +1,24 @@
 import React from "react";
 import "./RegisterationHeader.css";
 import Navbar from "../../Navbar";
-import RegisterForm from "../RegisterForm/Index";
-import AdditionalInfoForm from "../AdditionalInfoForm/Index";
-import FinancialInfoForm from "../FinancialInfoForm/Index";
-function Index(props) {
-  const { heading, button, stepDescription, stepName, stepsIndicator } =
-    props.headerData;
+import ScrollToTop from "../../ScrollToTop";
 
+function Index({
+  heading,
+  headerButton,
+  stepDescription,
+  stepName,
+  stepsIndicator,
+}) {
   return (
-    <main className="form-header-container">
-      
+    <>
+      <ScrollToTop />
+      <main className="form-header-container">
         <div className="registeration-header-container">
           <Navbar />
           <section className="form-information">
             <h1 className="form-title">{heading}</h1>
             <div className="steps-container">
-             
               {stepsIndicator.map((val) => {
                 return (
                   <div className="step active">
@@ -27,12 +29,32 @@ function Index(props) {
             </div>
             <h4 className="step-title">{stepName}</h4>
             <p className="step-description">{stepDescription}</p>
+            <div className="header-buttons-container">
+              {headerButton &&
+                headerButton.map((val, index) => {
+                  return (
+                    <button
+                      className={`btn-secondary btn-lg ${
+                        index === 0 ? "btn-ghost" : ""
+                      }`}
+                    >
+                      {val}
+                    </button>
+                  );
+                })}
+            </div>
+            {headerButton && (
+              <p className="contact-email">
+                Having issues? Please contact{" "}
+                <span> support@investors.club </span>
+              </p>
+            )}
           </section>
         </div>
-        {/* <RegisterForm button={button} /> */}
         {/* <AdditionalInfoForm formData={props} /> */}
-        <FinancialInfoForm formData={props} />
-    </main>
+        {/* <RegisterForm /> */}
+      </main>
+    </>
   );
 }
 

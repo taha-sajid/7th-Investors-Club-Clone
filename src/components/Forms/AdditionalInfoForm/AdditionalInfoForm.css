@@ -54,6 +54,15 @@
     margin-top: .75rem;
 }
 
+.form-background {
+    background-color: var(--background-color);
+}
+
+.form-section {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .text-area {
     flex-direction: column;
     align-items: start !important;
@@ -90,6 +99,8 @@
     width: fit-content;
 }
 
+
+
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
     .additional-info-form-container textarea {
@@ -105,6 +116,15 @@
 @media only screen and (max-width: 544px) {
     .additional-info-form-container .form-options-container button {
         width: 100%;
+    }
+
+    .additional-info-form-container {
+        font-size: .78rem;
+        color: var(--dark-text);
+    }
+
+    .additional-info-form-container .form-options-container button {
+        font-size: .75rem;
     }
 
 

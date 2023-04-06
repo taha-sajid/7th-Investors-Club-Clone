@@ -116,8 +116,9 @@
   font-size: 0.8rem;
   box-shadow: none;
 }
-.nav-btn button:first-child {
-}
+
+.nav-btn button:first-child {}
+
 .nav-btn .nav-menu-link-black {
   color: #4a1172;
 }
