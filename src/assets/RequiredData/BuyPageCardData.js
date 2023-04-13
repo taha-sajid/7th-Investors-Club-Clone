@@ -1,4 +1,6 @@
 import { CheckStarSVG, EyeSVG2, CommunicationSVG } from "./Svgs";
+import React from "react";
+
 const data = [
   {
     icon: <CheckStarSVG />,

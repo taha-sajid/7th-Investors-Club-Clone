@@ -1,5 +1,6 @@
-import { RoundCheckSVG, RoundCrossSVG } from "../../assets/RequiredData/Svgs";
+import React from 'react';
 
+import { RoundCheckSVG, RoundCrossSVG } from "../../assets/RequiredData/Svgs";
 const data = [
   {
     id: 1,

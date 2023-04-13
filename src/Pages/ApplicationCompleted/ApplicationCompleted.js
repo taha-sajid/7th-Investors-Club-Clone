@@ -1,5 +1,6 @@
 import { applicationCompleted } from "../../assets/RequiredData/FormData";
 import FormHeader from "../../components/Forms/FormHeader/RegisterationHeader";
+import React from "react";
 
 import FinancialInfoForm from "../../components/Forms/FinancialInfoForm/FinancialInfoForm";
 

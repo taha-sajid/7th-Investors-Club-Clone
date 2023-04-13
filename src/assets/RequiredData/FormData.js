@@ -1,4 +1,5 @@
 import { BsCheck2 } from "react-icons/bs";
+import React from 'react';
 
 export const register = {
   heading: `Let's get things rolling...`,

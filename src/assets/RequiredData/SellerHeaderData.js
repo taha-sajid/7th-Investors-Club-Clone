@@ -14,3 +14,4 @@ const data = {
   isHomeOpen: false,
 };
 export default data;
+

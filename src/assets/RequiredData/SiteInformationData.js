@@ -1,3 +1,4 @@
+import React from 'react';
 import { SuccessSVG, AllertSVG } from "./Svgs";
 
 const domainStrengthData = [

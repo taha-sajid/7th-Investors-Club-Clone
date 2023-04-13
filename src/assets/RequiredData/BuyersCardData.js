@@ -1,4 +1,5 @@
 import { CupSVG, StarSVG, CheckSVG, WalletSVG } from "./Svgs";
+import React from "react";
 
 const data = [
   {
