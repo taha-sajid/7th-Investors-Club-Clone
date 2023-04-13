@@ -3,8 +3,8 @@ import "./App.css";
 import React from "react";
 
 // import Header from "./components/Header";
-import Login from "./components/Login";
 import Registeration from "./Pages/RegisterForm";
+import Login from "./components/Login";
 import AdditionalInfoForm from "./Pages/AdditionalInfoForm";
 import FinancialInfoForm from "./Pages/FinancialInfoForm";
 import ApplicationCompleted from "./Pages/ApplicationCompleted";
