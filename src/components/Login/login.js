@@ -30,7 +30,7 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      {/* <div className="login-form-container">
+      <div className="login-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Login</h2>
           <div className="input-field">
@@ -82,8 +82,8 @@ const Index = () => {
             Don't have an account yet? <span> Click here </span>to create one.
           </div>
         </form>
-      </div> */}
-      <Dashboard />
+      </div>
+      {/* <Dashboard /> */}
     </>
   );
 };
