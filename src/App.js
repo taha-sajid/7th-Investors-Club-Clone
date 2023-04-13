@@ -1,17 +1,17 @@
 import "./App.css";
-// import TopNav from "./components/TopNav"
+// import TopNav from "./Components/TopNav"
 import React from "react";
 
-// import Header from "./components/Header";
+// import Header from "./Components/Header";
 import Registeration from "./Pages/RegisterForm";
-import Footer from "./components/Footer";
-import Login from "./components/Login";
+import Login from "./Components/Login";
 import AdditionalInfoForm from "./Pages/AdditionalInfoForm";
 import FinancialInfoForm from "./Pages/FinancialInfoForm";
 import ApplicationCompleted from "./Pages/ApplicationCompleted";
 import Buy from "./Pages/Buy";
 import Home from "./Pages/Home";
 import Premium from "./Pages/Premium";
+import Footer from "./Components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,7 +24,6 @@ function App() {
   console.log("It's working fine");
   return (
     <Router>
-      <Footer />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -41,6 +40,7 @@ function App() {
             element={<ApplicationCompleted />}
           />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

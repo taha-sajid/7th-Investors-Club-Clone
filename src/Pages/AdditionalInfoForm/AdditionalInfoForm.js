@@ -1,7 +1,7 @@
 import React from "react";
-import FormHeader from "../../components/Forms/FormHeader/RegisterationHeader";
-import AdditionalInfoForm from "../../components/Forms/AdditionalInfoForm/AdditionalInfoForm";
-import "../../components/Forms/AdditionalInfoForm/AdditionalInfoForm.css";
+import FormHeader from "../../Components/Forms/FormHeader/RegisterationHeader";
+import AdditionalInfoForm from "../../Components/Forms/AdditionalInfoForm/AdditionalInfoForm";
+import "../../Components/Forms/AdditionalInfoForm/AdditionalInfoForm.css";
 import { additionalInfo } from "../../assets/RequiredData/FormData";
 
 const index = () => {

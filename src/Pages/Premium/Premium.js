@@ -1,12 +1,12 @@
 import React from "react";
 import PremiumHeaderData from "../../assets/RequiredData/PremiumHeaderData";
-import Header from "../../components/Header/Header";
-import FeaturedIn from "../../components/FeaturedIn/FeaturedIn";
-import OurMemberShip from "../../components/OurMemberShip/OurMemberShip";
-import RequireBusiness from "../../components/RequireBuisness/RequireBusiness";
-import PremiumTestimonials from "../../components/PremiumTestimonials/PremiumTestimonials";
-import FAQs from "../../components/FAQs/FAQs";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import Header from "../../Components/Header/Header";
+import FeaturedIn from "../../Components/FeaturedIn/FeaturedIn";
+import OurMemberShip from "../../Components/OurMemberShip/OurMemberShip";
+import RequireBusiness from "../../Components/RequireBuisness/RequireBusiness";
+import PremiumTestimonials from "../../Components/PremiumTestimonials/PremiumTestimonials";
+import FAQs from "../../Components/FAQs/FAQs";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 const Premium = () => {
   const { slogon, heading, buttons, isHomeOpen, features, headerImage } =
     PremiumHeaderData;

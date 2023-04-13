@@ -1,16 +1,16 @@
 import React from "react";
-import RecentlySoldSlider from "../../components/RecentlySoldSlider/RecentlySoldSlider";
-import Buyers from "../../components/Buyers/Buyers";
-import Seller from "../../components/Seller/Seller";
-import LatestEdition from "../../components/LatestEdition/LatestEdition";
-import CurrentPosition from "../../components/CurrentPosition/CurrentPosition";
-import JoinThePremium from "../../components/JoinThePremium/JoinThePremium";
-import Testimonials from "../../components/Testimonials/Testimonials";
-import FreeResources from "../../components/FreeResources/FreeResources";
-import Header from "../../components/Header/Header";
+import RecentlySoldSlider from "../../Components/RecentlySoldSlider/RecentlySoldSlider";
+import Buyers from "../../Components/Buyers/Buyers";
+import Seller from "../../Components/Seller/Seller";
+import LatestEdition from "../../Components/LatestEdition/LatestEdition";
+import CurrentPosition from "../../Components/CurrentPosition/CurrentPosition";
+import JoinThePremium from "../../Components/JoinThePremium/JoinThePremium";
+import Testimonials from "../../Components/Testimonials/Testimonials";
+import FreeResources from "../../Components/FreeResources/FreeResources";
+import Header from "../../Components/Header/Header";
 import HomeHeaderData from "../../assets/RequiredData/HomeHeaderData";
 import cardData from "../../assets/RequiredData/LatestEditionCardData";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   const {

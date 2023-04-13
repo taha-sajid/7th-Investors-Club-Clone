@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../components/Header/Header";
+import Header from "../../Components/Header/Header";
 import BuyerHeaderData from "../../assets/RequiredData/BuyerHeaderData";
-import Cards from "../../components/Cards/Cards";
-import BuyerFeatures from "../../components/BuyerFeatures/BuyerFeatures";
-import LatestEdition from "../../components/LatestEdition/LatestEdition";
-import Highlight from "../../components/Highlight/Highlight";
-import ShowKindness from "../../components/ShowKindness/ShowKindness";
+import Cards from "../../Components/Cards/Cards";
+import BuyerFeatures from "../../Components/BuyerFeatures/BuyerFeatures";
+import LatestEdition from "../../Components/LatestEdition/LatestEdition";
+import Highlight from "../../Components/Highlight/Highlight";
+import ShowKindness from "../../Components/ShowKindness/ShowKindness";
 import cardData from "../../assets/RequiredData/BuyPageLatestEditionData";
-import Analyze from "../../components/Analyze/Analyze";
-import JoinUsToday from "../../components/JoinUsToday/JoinUsToday";
-import CompareUs from "../../components/CompareUs/CompareUs";
-import PremiumServices from "../../components/PremiumServices/PremiumServices";
-import Testimonials from "../../components/Testimonials/Testimonials";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import Analyze from "../../Components/Analyze/Analyze";
+import JoinUsToday from "../../Components/JoinUsToday/JoinUsToday";
+import CompareUs from "../../Components/CompareUs/CompareUs";
+import PremiumServices from "../../Components/PremiumServices/PremiumServices";
+import Testimonials from "../../Components/Testimonials/Testimonials";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
