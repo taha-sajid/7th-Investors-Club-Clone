@@ -15,11 +15,12 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import Footer from "./components/Footer";
 import Sell from "./Pages/Sell";
 function App() {
-  console.log(`it's working fine`);
+  console.log("It's working fine");
   return (
     <Router>
       <div className="App">

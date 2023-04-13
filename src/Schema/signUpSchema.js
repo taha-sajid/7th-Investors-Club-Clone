@@ -9,7 +9,7 @@ export const signUpSchema = Yup.object({
     .email("This is not a valid email address")
     .required("You must provide e-mail to log in."),
   password: Yup.string().min(8).required("Please enter your password"),
-  confirm_password: Yup.string()
+  passwordConfirm: Yup.string()
     .required()
     .oneOf([Yup.ref("password"), null], "Password must be matched"),
 });

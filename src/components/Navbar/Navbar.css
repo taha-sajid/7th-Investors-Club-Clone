@@ -264,3 +264,7 @@
     margin-bottom: 1rem;
   }
 }
+
+.nav-btn .btn-ghost {
+  /* color: white; */
+}
