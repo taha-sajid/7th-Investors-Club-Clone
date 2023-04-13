@@ -31,8 +31,8 @@ function App() {
           <Route path="/buy-online-business" element={<Buy />} />
           <Route path="/sell-your-website" element={<Sell />} />
           <Route path="/premium" element={<Premium />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registeration />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/additional-info" element={<AdditionalInfoForm />} />
           <Route path="/financial-info" element={<FinancialInfoForm />} />
           <Route
