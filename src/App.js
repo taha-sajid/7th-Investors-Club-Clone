@@ -4,6 +4,7 @@ import React from "react";
 
 // import Header from "./components/Header";
 import Registeration from "./Pages/RegisterForm";
+import Footer from "./components/Footer";
 import Login from "./components/Login";
 import AdditionalInfoForm from "./Pages/AdditionalInfoForm";
 import FinancialInfoForm from "./Pages/FinancialInfoForm";
@@ -18,12 +19,12 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import Footer from "./components/Footer";
 import Sell from "./Pages/Sell";
 function App() {
   console.log("It's working fine");
   return (
     <Router>
+      <Footer />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -40,8 +41,6 @@ function App() {
             element={<ApplicationCompleted />}
           />
         </Routes>
-
-        <Footer />
       </div>
     </Router>
   );
