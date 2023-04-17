@@ -1,6 +1,6 @@
 import React from "react";
 import FormHeader from "../../Components/Forms/FormHeader/RegisterationHeader";
-import AdditionalInfoForm from "../../Components/Forms/AdditionalInfoForm";
+import AdditionalInfoForm from "../../Components/Forms/AdditionalInfoForm/AdditionalInfoForm";
 import "../../Components/Forms/AdditionalInfoForm/AdditionalInfoForm.css";
 import { additionalInfo } from "../../assets/RequiredData/FormData";
 

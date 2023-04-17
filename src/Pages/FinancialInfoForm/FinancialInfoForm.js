@@ -2,7 +2,7 @@ import React from "react";
 import { financialInfo } from "../../assets/RequiredData/FormData";
 import FormHeader from "../../Components/Forms/FormHeader/RegisterationHeader";
 
-import FinancialInfoForm from "../../Components/Forms/FinancialInfoForm";
+import FinancialInfoForm from "../../Components/Forms/FinancialInfoForm/FinancialInfoForm";
 
 const index = () => {
   return (

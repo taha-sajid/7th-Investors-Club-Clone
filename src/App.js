@@ -3,15 +3,17 @@ import "./App.css";
 import React from "react";
 
 // import Header from "./Components/Header";
-import Registeration from "./Pages/RegisterForm";
+import Registeration from "./Pages/RegisterForm/RegisterForm";
 import Login from "./Components/Login/login";
-import AdditionalInfoForm from "./Pages/AdditionalInfoForm";
-import FinancialInfoForm from "./Pages/FinancialInfoForm";
-import ApplicationCompleted from "./Pages/ApplicationCompleted";
-import Buy from "./Pages/Buy";
-import Home from "./Pages/Home";
-import Premium from "./Pages/Premium";
-import Footer from "./Components/Footer";
+import AdditionalInfoForm from "./Pages/AdditionalInfoForm/AdditionalInfoForm";
+import FinancialInfoForm from "./Pages/FinancialInfoForm/FinancialInfoForm";
+import ApplicationCompleted from "./Pages/ApplicationCompleted/ApplicationCompleted";
+import Buy from "./Pages/Buy/Buy";
+import Home from "./Pages/Home/Home";
+import Premium from "./Pages/Premium/Premium";
+import Footer from "./Components/Footer/Footer";
+import Sell from "./Pages/Sell/Sell";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,7 +21,6 @@ import {
   // Navigate,
   // useLocation,
 } from "react-router-dom";
-import Sell from "./Pages/Sell";
 function App() {
   console.log("It's working fine");
   return (
