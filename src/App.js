@@ -4,7 +4,7 @@ import React from "react";
 
 // import Header from "./Components/Header";
 import Registeration from "./Pages/RegisterForm";
-import Login from "./Components/Login";
+import Login from "./Components/Login/login";
 import AdditionalInfoForm from "./Pages/AdditionalInfoForm";
 import FinancialInfoForm from "./Pages/FinancialInfoForm";
 import ApplicationCompleted from "./Pages/ApplicationCompleted";
