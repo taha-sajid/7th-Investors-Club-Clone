@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../Components/Header";
+import Header from "../../Components/Header/Header";
 import BuyerHeaderData from "../../assets/RequiredData/BuyerHeaderData";
 import Cards from "../../Components/Cards/Cards";
 import BuyerFeatures from "../../Components/BuyerFeatures/BuyerFeatures";
