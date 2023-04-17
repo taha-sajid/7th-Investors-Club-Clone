@@ -1,7 +1,7 @@
 import React from "react";
 import cardData from "../../assets/RequiredData/BuyPageCardData";
 import "./Cards.css";
-import { EyeSVG } from "../../assets/RequiredData/Svgs";
+
 const index = () => {
   return (
     <div className="cards-section">

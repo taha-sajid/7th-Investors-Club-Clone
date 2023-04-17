@@ -28,8 +28,7 @@ const data = [
     answer: `Because we’ve already done it for you, so you don’t have to. We know
     how time consuming and repetitive it is to constantly sift through
     listings. Furthermore, to do it at scale requires an extra set of
-    hands. Many investors don’t have the time or the resources to do it.`,
-    answer: ` That’s why we decided our team will go the extra mile unlike other
+    hands. Many investors don’t have the time or the resources to do it. That’s why we decided our team will go the extra mile unlike other
     lazy brokers who simply just list businesses and expect you to still
     do all of the work.`,
   },

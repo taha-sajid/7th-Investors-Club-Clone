@@ -12,8 +12,8 @@ const Header = ({
   backgroundImage,
   isHomeOpen,
 }) => {
-  const [showHeader, setShowHeader] = useState(true);
-  const [isHome, setIsHome] = useState(isHomeOpen);
+  const [showHeader] = useState(true);
+  const [isHome] = useState(isHomeOpen);
   return (
     <div
       className={isHome ? "header" : "header header-bottom-radius"}

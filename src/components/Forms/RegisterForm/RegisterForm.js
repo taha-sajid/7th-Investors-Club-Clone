@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./RegisterForm.css";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../../Schema/signUpSchema";
@@ -20,7 +20,7 @@ const Index = () => {
     errors,
     touched,
     isValid,
-    toggle,
+    // toggle,
   } = useFormik({
     initialValues,
     validationSchema: signUpSchema,
@@ -36,7 +36,7 @@ const Index = () => {
 
   const postData = async () => {
     const { name, email, password, phoneNumber, passwordConfirm } = values;
-    console.log(passwordConfirm);
+
     const res = await fetch("https://investors-club.cyclic.app/register", {
       method: "POST",
       headers: {
@@ -58,7 +58,7 @@ const Index = () => {
     handleSubmit();
     postData();
   };
-  console.log("first");
+
   return (
     <>
       <form

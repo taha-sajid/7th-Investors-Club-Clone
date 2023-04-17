@@ -1,6 +1,5 @@
 import React from "react";
 import "./PremiumServices.css";
-import { BsCheck2 } from "react-icons/bs";
 
 const PremiumServices = () => {
   return (

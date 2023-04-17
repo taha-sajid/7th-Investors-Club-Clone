@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { PolygonSVG } from "../../assets/RequiredData/Svgs";
 import "./Analyze.css";
-import FinancialOverview from "./FinancialOverview/FinanceOverview";
 import TrafficOverview from "./TrafficOverview/TrafficOverview";
 import BusinessAnalysis from "./BusinessAnalysis/BusinessAnalysis";
 import SiteInformation from "./SiteInformation/SiteInformation";

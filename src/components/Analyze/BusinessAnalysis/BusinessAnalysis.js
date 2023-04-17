@@ -4,7 +4,6 @@ import data from "../../../assets/RequiredData/BusinessAnalysisData";
 import {
   BuzzLogicSVG,
   GrowNowSVG,
-  NicheSVG,
 } from "../../../assets/RequiredData/Svgs";
 const index = () => {
   return (

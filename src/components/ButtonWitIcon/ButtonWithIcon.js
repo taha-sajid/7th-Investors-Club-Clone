@@ -1,5 +1,5 @@
 import React from "react";
-import { additionalInfo } from "../../assets/RequiredData/FormData";
+// import { additionalInfo } from "../../assets/RequiredData/FormData";
 import { CheckButtonSVG } from "../../assets/RequiredData/Svgs";
 import { useState } from "react";
 

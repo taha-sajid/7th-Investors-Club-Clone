@@ -16,8 +16,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
-  useLocation,
+  // Navigate,
+  // useLocation,
 } from "react-router-dom";
 import Sell from "./Pages/Sell";
 function App() {

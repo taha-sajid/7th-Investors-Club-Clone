@@ -1,7 +1,7 @@
 import React from "react";
 import "./SellerFeatures.css";
 import cardData from "../../assets/RequiredData/SellerFeatursCardData";
-import CurrentPosition from "../CurrentPosition/CurrentPosition";
+
 const index = () => {
   return (
     <section className="seller-features-section">

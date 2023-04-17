@@ -6,7 +6,7 @@ import { loginSchema } from "../../Schema/LoginSchema";
 import { useSelector } from "react-redux";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
 const Index = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin] = useState(true);
   const { isLoading } = useSelector((state) => state.auth);
   console.log("isLoading is", isLoading);
   const initialValues = {

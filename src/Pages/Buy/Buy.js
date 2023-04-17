@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "../../Components/Header";
 import BuyerHeaderData from "../../assets/RequiredData/BuyerHeaderData";
 import Cards from "../../Components/Cards/Cards";
