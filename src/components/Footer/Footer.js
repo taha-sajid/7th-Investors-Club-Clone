@@ -32,31 +32,29 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <div className="main-links">
-            <a href="">Sell My Website</a>
-            <a href="">Buy a Website</a>
-            <a href="">Blog</a>
-            <a href="">About us</a>
-            <a href="">Contact</a>
+            <a href="/sell-your-website">Sell My Website</a>
+            <a href="buy-online-business">Buy a Website</a>
+            <span>Blog</span>
+            <span>About us</span>
+            <a href="/contact">Contact</a>
           </div>
           <div className="terms-and-conditions-link">
-            <a href="">Sellers FAQ</a>
-            <a href="">Buyers FAQ</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Terms And Conditions</a>
-            <a href="">Affiliates</a>
+            <span>Sellers FAQ</span>
+            <span>Buyers FAQ</span>
+            <span>Privacy Policy</span>
+            <span>Terms And Conditions</span>
+            <span>Affiliates</span>
           </div>
         </div>
         <div className="footer-copyright">
           <p>
-            Copyright 2022 by Investors Club LLC. All rights reserved. <br /> A part of
-            the Sharp Capital Group.
+            Copyright 2022 by Investors Club LLC. All rights reserved. <br /> A
+            part of the Sharp Capital Group.
           </p>
           <h5>Version: v4.19.0</h5>
         </div>
       </div>
-      <div className="footer-bottom-line">
-        
-      </div>
+      <div className="footer-bottom-line"></div>
     </>
   );
 };

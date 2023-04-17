@@ -40,7 +40,7 @@
 .terms-and-conditions-link{
   margin-left: 5rem;
 }
-.footer-links a {
+.footer-links a, .footer-links span {
   display: block;
   text-decoration: none;
   color: #786f82;

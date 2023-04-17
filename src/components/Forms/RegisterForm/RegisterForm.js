@@ -37,7 +37,7 @@ const Index = () => {
   const postData = async () => {
     const { name, email, password, phoneNumber, passwordConfirm } = values;
     console.log(passwordConfirm);
-    const res = await fetch("http://localhost:5000/register", {
+    const res = await fetch("https://investors-club.cyclic.app/register", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -156,7 +156,7 @@ const Index = () => {
           </div>
           <div className="input-block">
             <label htmlFor="passwordConfirm" className="input-label">
-             Confirm Password
+              Confirm Password
             </label>
             <input
               type="password"
