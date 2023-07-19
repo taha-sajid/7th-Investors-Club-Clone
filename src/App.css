@@ -48,6 +48,7 @@
   --color: #c5baba;
 }
 
+/* Main/Primary button */
 .btn-primary {
   background: none;
   border: none;
@@ -138,6 +139,14 @@
 .btn-lg {
   font-size: 0.8rem;
   padding: 1rem 3rem;
+}
+
+.margin--left__sml {
+  margin-left: .5rem;
+}
+
+.margin--left__lg {
+  margin-left: 1.5rem;
 }
 
 .notice {

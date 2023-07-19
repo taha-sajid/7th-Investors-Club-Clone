@@ -16,7 +16,6 @@ import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 const Buy = () => {
   const { heading, slogon, features, buttons, backgroundImage, isHomeOpen } =
     BuyerHeaderData;
-
   return (
     <>
       <ScrollToTop />

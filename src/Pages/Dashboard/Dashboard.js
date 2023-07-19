@@ -1,48 +1,88 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import Offers from "./Offers/Offers";
+import Inbox from "./Inbox/Inbox";
+import Notifications from "./Notifications/Notifications";
+import Account from "./Account/Account";
+import Navbar from "../../Components/Navbar/Navbar";
+import { FormControlLabel, FormGroup, Switch } from "@mui/material";
 const Dashboard = () => {
+  const location = useLocation();
+  const pathName = location.pathname.split("/");
+  let currentPage = pathName[2];
+
+  const options = [
+    { id: 1, name: "Offers" },
+    { id: 2, name: "Inbox" },
+    { id: 3, name: "Notifications" },
+    { id: 4, name: "Account" },
+    { id: 5, name: "Receipts" },
+    { id: 6, name: "Subscriptions" },
+  ];
+
+  if (currentPage === "information") {
+    currentPage = "account";
+  }
+  const [activeOption, setActiveOption] = useState(currentPage);
+  useEffect(() => {
+    setActiveOption(currentPage);
+  }, [location]);
+
   return (
     <>
+      <Navbar />
       <main className="dashboard-container">
         <header className="dashboard-header">
           <div className="account-heading">
             <h1> My account</h1>
           </div>
           <div className="account-type">
-            I'm a <span> buyer</span>
+            <p>
+              I'm a <span> buyer</span>
+            </p>
+            <FormGroup>
+              <FormControlLabel control={<Switch />} />
+            </FormGroup>
           </div>
         </header>
         <section className="dashboard-body">
           <div className="dashboard-sidebar">
-            <ul className="dashboard-sidebar-list">
-              <li className="dashboard-sidebar-list ">
-                <Link to={"/account/offers"} className="active">Offers</Link>
-              </li>
-              <li className="dashboard-sidebar-list">
-                <Link to={"/account/inbox"}>Inbox</Link>
-              </li>
-              <li className="dashboard-sidebar-list">
-                <Link to={"/account/notifications"}>Notifications</Link>
-              </li>
-              <li className="dashboard-sidebar-list">
-                <Link to={"/account/information"}>Account</Link>
-              </li>
-              <li className="dashboard-sidebar-list">
-                <Link to={"/account/reciepts"}>Receipts</Link>
-              </li>
-              <li className="dashboard-sidebar-list">
-                <Link to={"/account/subscription"}>Subscription</Link>
-              </li>
-            </ul>
+            <div className="dashboard-sidebar-list">
+              <ul className="">
+                {options.map((option) => {
+                  return (
+                    <li className="dashboard-sidebar-list" key={option.id}>
+                      <Link
+                        to={`/account/${
+                          option.name === "Account"
+                            ? "information"
+                            : `${option.name.toLowerCase()}`
+                        }   `}
+                        className={
+                          activeOption === option.name.toLowerCase()
+                            ? `active`
+                            : ""
+                        }
+                      >
+                        {option.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="sidebar-footer">
+              <button className="btn-ghost"> logout</button>
+            </div>
           </div>
           <div className="dashboard-content">
-            <h2 className="dashboard-content-heading">Offers</h2>
-            <div className="dashboard-content-body">
-              <p>You don't have any offers yet</p>
-              <button className="btn-primary">Browse listings here</button>
-            </div>
+            {location.pathname === "/account/offers" && <Offers />}
+            {location.pathname === "/account/inbox" && <Inbox />}
+            {location.pathname === "/account/notifications" && (
+              <Notifications />
+            )}
+            {location.pathname === "/account/information" && <Account />}
           </div>
         </section>
       </main>

@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
+import React, { useEffect, useState, useRef } from "react";
 
+// IMPORT REQUIRED ICONS
+import { Link, useLocation } from "react-router-dom";
+import { BsFillPersonFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { NotificationSVG } from "../../assets/RequiredData/Svgs";
 import {
   NavLogoMobileWhite,
   NavLogoMobileBlue,
@@ -9,36 +12,90 @@ import {
   NavLogoLargeScreenBlue,
 } from "../../assets/RequiredData/Svgs";
 
+// IMPORT STYLE CSS FILE
+import "./Navbar.css";
+
+// IMPORT COMPONENTS
+import NavNotification from "../NavNotification/NavNotification";
+import NavInbox from "../NavInbox/NavInbox";
+
 const Index = () => {
+  // isNavActive checks Nav Togglebar
   const [isNavActive, setIsNavActive] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [isMessageOpen, setIsMessageOpen] = useState(false);
 
-  // Check whether current page is a login page or not
-  let isLoginPage =
-    window.location.href === "https://localhost:3000/login" ||
-    window.location.href === "http://localhost:3000/login";
+  // Check what the current page is
+  const location = useLocation();
+  const pathName = location.pathname.split("/");
+  const currentPage = pathName[1];
 
-  // This function is for disabling background scrolling when the nav toggle open in small screen
+  const isNavWhite = currentPage === "account" || currentPage === "login";
+
+  let navbarClass = ""; // Default navbar class
+
+  // Using as a reference of notification & message DOM element
+  const notificationRef = useRef(null);
+  const messageRef = useRef(null);
+
+  // Check the current location and assign the appropriate class
+  if (currentPage === "account") {
+    navbarClass = "account";
+  } else if (currentPage === "login") {
+    navbarClass = "login";
+  }
+
+  // console.log(navbarClass, "className");
+  // console.log(location.pathname);
+
+  // This function is for disabling background scrolling when the nav toggle open
   function disableBodyScroll() {
     document.getElementsByTagName("body")[0].classList.add("stop-scroll");
   }
 
-  // This function is for enabling background scrolling when the nav toggle open in small screen
+  // This function is for enabling background scrolling when the nav toggle open
   function enableBodyScroll() {
     document.getElementsByTagName("body")[0].classList.remove("stop-scroll");
   }
+
+  // Run whenever user toggle navbar
   useEffect(() => {
     if (isNavActive) disableBodyScroll();
     else enableBodyScroll();
   }, [isNavActive]);
 
+  // Handle outside click of Inbox & Notification box
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (
+        notificationRef.current &&
+        !notificationRef.current.contains(event.target)
+      ) {
+        setIsNotificationOpen(false);
+      }
+      if (messageRef.current && !messageRef.current.contains(event.target)) {
+        setIsMessageOpen(false);
+      }
+    };
+    window.addEventListener("click", handleClick);
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  });
+
   return (
     <>
-      <nav className={isNavActive ? "navigation nav-active" : "navigation"}>
+      <nav
+        className={
+          isNavActive ? "navigation nav-active" : `navigation ${navbarClass}`
+        }
+      >
+        {/* Navbar toggle */}
         <div
           className={isNavActive ? "nav-toggle nav-active" : "nav-toggle"}
           onClick={() => {
             setIsNavActive((prev) => !prev);
-            console.log("click");
           }}
         >
           <button className="hamburger">
@@ -46,12 +103,13 @@ const Index = () => {
             <span className="line2"></span>
           </button>
         </div>
+
+        {/*MAIN NAVBAR */}
         <div className="nav-content">
           <div className="nav-logo-menu">
             <div className="nav-logo">
               <Link to={"/"}>
-                {/* Investors<span>club </span> */}
-                {isLoginPage ? (
+                {isNavWhite ? (
                   <NavLogoLargeScreenBlue />
                 ) : (
                   <NavLogoLargeScreenWhite />
@@ -59,29 +117,15 @@ const Index = () => {
               </Link>
               <div className="logo-small-screen">
                 <Link to={"/"}>
-                  {isLoginPage ? <NavLogoMobileBlue /> : <NavLogoMobileWhite />}
+                  {isNavWhite ? <NavLogoMobileBlue /> : <NavLogoMobileWhite />}
                 </Link>
               </div>
             </div>
             <div className="nav-menu">
-              <Link
-                to={"/buy-online-business"}
-                className={
-                  isLoginPage
-                    ? "visited-link nav-menu-link-black"
-                    : "visited-link"
-                }
-              >
+              <Link to={"/buy-online-business"} className={"visited-link"}>
                 buy
               </Link>
-              <Link
-                to={"/sell-your-website"}
-                className={
-                  isLoginPage
-                    ? "visited-link nav-menu-link-black"
-                    : "visited-link"
-                }
-              >
+              <Link to={"/sell-your-website"} className={"visited-link"}>
                 sell
               </Link>
               <Link to={"/premium"} className="premium ">
@@ -89,20 +133,78 @@ const Index = () => {
               </Link>
             </div>
           </div>
-          <div className="nav-btn">
-            <Link to={"/login"}>
-              <button
-                className={
-                  isLoginPage ? "btn-ghost nav-menu-link-black" : "btn-ghost"
-                }
+          {!isLogin && (
+            <div className="nav-btn">
+              <Link to={"/login"}>
+                <button className={"btn-ghost"}>Login</button>
+              </Link>
+              <Link to={"/register"}>
+                <button className="btn-secondary">create free account</button>
+              </Link>
+            </div>
+          )}
+
+          {/* If user is Login then this code will render */}
+          {isLogin && (
+            <div className="login-nav-btn">
+              <Link to={"/financial-info"} className="user-options">
+                Check Application Status
+              </Link>
+
+              <Link to={"/purchases"} className="user-options margin--left__lg">
+                My Purchases
+              </Link>
+              <Link to={"/account/offers"} className="avatar margin--left__sml">
+                <i>
+                  <BsFillPersonFill />
+                </i>
+                <p> chriss</p>
+              </Link>
+
+              {/* MESSAGE toggle */}
+              <div className="message-icon avatar-message" ref={messageRef}>
+                <Link
+                  onClick={() => {
+                    setIsMessageOpen(!isMessageOpen);
+                  }}
+                >
+                  <i>
+                    <MdEmail />
+                  </i>
+                </Link>
+                <div
+                  className={
+                    isMessageOpen ? `toggle-active` : "toggle-inactive"
+                  }
+                >
+                  {isMessageOpen && <NavInbox />}
+                </div>
+              </div>
+
+              {/* NOTIFICATION toggle */}
+              <div
+                className="notification-icon avatar-notification"
+                ref={notificationRef}
               >
-                Login
-              </button>
-            </Link>
-            <Link to={"/register"}>
-              <button className="btn-secondary">create free account</button>
-            </Link>
-          </div>
+                <Link
+                  onClick={() => {
+                    setIsNotificationOpen(!isNotificationOpen);
+                  }}
+                >
+                  <i>
+                    <NotificationSVG />
+                  </i>
+                </Link>
+                <div
+                  className={
+                    isNotificationOpen ? `toggle-active` : "toggle-inactive"
+                  }
+                >
+                  {isNotificationOpen && <NavNotification />}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </>

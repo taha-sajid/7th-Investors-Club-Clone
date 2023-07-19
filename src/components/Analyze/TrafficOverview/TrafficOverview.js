@@ -1,10 +1,19 @@
 import React from "react";
 import "./TrafficOverview.css";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+} from "chart.js";
 import { Line } from "react-chartjs-2";
 
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
+
 const Index = () => {
-  const taha = React.createRef();
-  console.log(taha);
+  const chartContainerRef = React.createRef();
+  console.log(chartContainerRef);
 
   // let gradient = ctx.createLinearGradient(0, 0, 0, 400);
   // gradient.addColorStop(0, "rgba(58,123,213,1");
@@ -29,8 +38,17 @@ const Index = () => {
     datasets: [
       {
         data: [
-          10000, 90000, 120000, 270000, 220000, 270000, 250000, 300000, 270000,
-          350000, 500000,
+          10000,
+          90000,
+          120000,
+          270000,
+          220000,
+          270000,
+          250000,
+          300000,
+          270000,
+          350000,
+          500000,
         ],
         label: "Website details",
         fill: true,
@@ -66,8 +84,8 @@ const Index = () => {
           <div className="graph-button-wrapper">
             <div className="graph-button">
               <h4>View data as</h4>
-                <button className="btn-primary-light btn-active">graph</button>
-                <button className="btn-primary-light">table</button>
+              <button className="btn-primary-light btn-active">graph</button>
+              <button className="btn-primary-light">table</button>
             </div>
             <div className="graph-button">
               <h4>Group data by</h4>
@@ -96,7 +114,7 @@ const Index = () => {
         </div>
 
         <div className="graph">
-          <Line ref={taha} data={data} options={config} />
+          <Line ref={chartContainerRef} data={data} options={config} />
         </div>
 
         <div className="graph-comparison-dates">

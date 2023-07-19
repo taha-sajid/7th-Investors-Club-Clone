@@ -7,7 +7,13 @@ const initialState = {
 const authSlice = createSlice({
   name: "auth",
   initialState,
+  reducers: {
+    checkLoggedIn: (state) => {
+      state.isLoggedIn = true;
+    },
+  },
 });
 
-console.log(authSlice);
+export const { checkLoggedIn } = authSlice.actions;
+console.log(authSlice.actions);
 export default authSlice.reducer;
