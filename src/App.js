@@ -28,6 +28,9 @@ import {
   // useLocation,
 } from "react-router-dom";
 
+
+
+// Path error 
 function App() {
   console.log("It's working fine");
   const routes = [
