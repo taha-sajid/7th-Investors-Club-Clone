@@ -5,15 +5,15 @@ const LatestEdition = ({ cardData }) => {
   return (
     <>
       <div className="latest-addition-section">
-        <div className="heading">
+        {/* <div className="heading">
           <h2>Our latest additions</h2>
           <p>
             New deals added constantly. Multiple industries, price points, and
             profit margins—but all vetted and proven money-makers.
           </p>
-        </div>
+        </div> */}
         <div className="addition-cards-bunch">
-          {cardData.map((card, index) => {
+          {cardData.map((card, index) => {  
             const { image, cardTag, averageRevenue, category, price } = card;
             return (
               <div className="addition-cards" key={index}>

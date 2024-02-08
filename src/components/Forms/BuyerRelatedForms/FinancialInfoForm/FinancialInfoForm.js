@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./FinancialInfoForm.css";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
-import { FinancialInfoSchema } from "../../../Schema/FinancialInfoSchema";
+import { FinancialInfoSchema } from "../../../../Schema/FinancialInfoSchema";
 const Index = ({ button }) => {
   const initialValues = {
     file: null,
@@ -71,7 +71,7 @@ const Index = ({ button }) => {
                 <p> x</p>
               </button>
             </div>
-          </div>{" "}
+          </div>
           <div className="uploaded-files">
             <div className="file-name">
               <p>Syed Muhammad Taha MERN Stack.docx</p>

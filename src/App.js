@@ -3,16 +3,21 @@ import "./App.css";
 import React from "react";
 
 // import Header from "./Components/Header/Header";
-import Registeration from "./Pages/RegisterForm/RegisterForm";
-import Login from "./Components/Login/Login";
-import AdditionalInfoForm from "./Pages/AdditionalInfoForm/AdditionalInfoForm";
-import FinancialInfoForm from "./Pages/FinancialInfoForm/FinancialInfoForm";
-import ApplicationCompleted from "./Pages/ApplicationCompleted/ApplicationCompleted";
-import Buy from "./Pages/Buy/Buy";
 import Home from "./Pages/Home/Home";
-import Premium from "./Pages/Premium/Premium";
-import Footer from "./Components/Footer/Footer";
+import Buy from "./Pages/Buy/Buy";
 import Sell from "./Pages/Sell/Sell";
+import Listings from "./Pages/Listings/Listings";
+import Premium from "./Pages/Premium/Premium";
+import Login from "./Components/Forms/CommonForms/LoginForm/LoginForm";
+import Registeration from "./Pages/Register/Register";
+import AdditionalInfoForm from "./Pages/AdditionalInfo/AdditionalInfo";
+import FinancialInfoForm from "./Pages/FinancialInfo/FinancialInfo";
+import ApplicationCompleted from "./Pages/ApplicationCompleted/ApplicationCompleted";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import Footer from "./Components/Footer/Footer";
+import SellYourWebsite from "./Pages/SellYourWebsite/SellYourWebsite";
+import SingleProductPage from "./Components/SingleProductPage/SingleProductPage";
+import MonitizationInfo from "./Pages/MonitizationInfo/MonitizationInfo";
 
 import {
   BrowserRouter as Router,
@@ -22,7 +27,6 @@ import {
   // Navigate,
   // useLocation,
 } from "react-router-dom";
-import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
   console.log("It's working fine");
@@ -42,6 +46,8 @@ function App() {
           {/* <Route path="/buy" element={<Navigate replace to="/buy" />} /> */}
           <Route path="/buy-online-business" element={<Buy />} />
           <Route path="/sell-your-website" element={<Sell />} />
+          <Route path="/listings" element={<Listings />} />
+          <Route path="/listings/productpage" element={<SingleProductPage />} />
           <Route path="/premium" element={<Premium />} />
           <Route path="/register" element={<Registeration />} />
           <Route path="/login" element={<Login />} />
@@ -53,6 +59,14 @@ function App() {
           <Route
             path="/application-completed"
             element={<ApplicationCompleted />}
+          />
+          <Route
+            path="/sell-your-website/intro"
+            element={<SellYourWebsite />}
+          />
+          <Route
+            path="/sell-your-website/content/step-1"
+            element={<MonitizationInfo />}
           />
         </Routes>
         <Footer />

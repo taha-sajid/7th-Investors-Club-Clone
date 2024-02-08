@@ -1,6 +1,6 @@
 import React from "react";
-import FormHeader from "../../Components/Forms/FormHeader/RegisterationHeader";
-import RegisterForm from "../../Components/Forms/RegisterForm/RegisterForm";
+import FormHeader from "../../Components/Forms/CommonForms/FormHeader/FormHeader";
+import RegisterForm from "../../Components/Forms/CommonForms/RegistrationForm/RegistrationForm";
 
 import { register } from "../../assets/RequiredData/FormData";
 

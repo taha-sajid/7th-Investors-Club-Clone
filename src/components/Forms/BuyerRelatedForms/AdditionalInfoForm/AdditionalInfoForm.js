@@ -1,9 +1,9 @@
 import React from "react";
 import "./AdditionalInfoForm.css";
-import ButtonWithIcon from "../../ButtonWitIcon/ButtonWithIcon";
+import ButtonWithIcon from "../../../ButtonWitIcon/ButtonWithIcon";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
-import { AdditionalInfoSchema } from "../../../Schema/AdditionalInfoSchema";
+import { AdditionalInfoSchema } from "../../../../Schema/AdditionalInfoSchema";
 const Index = ({
   ques1,
   ques1Options,

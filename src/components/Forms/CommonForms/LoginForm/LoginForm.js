@@ -1,28 +1,66 @@
 import React, { useEffect, useState } from "react";
-import "./login.css";
-import Navbar from "../Navbar/Navbar";
+import "./LoginForm.css";
+import Navbar from "../../../Navbar/Navbar";
 import { useFormik } from "formik";
-import { loginSchema } from "../../Schema/LoginSchema";
+import { loginSchema } from "../../../../Schema/LoginSchema";
 import { useSelector, useDispatch } from "react-redux";
-import Dashboard from "../../Pages/Dashboard/Dashboard";
-import { checkLoggedIn } from "../../ReduxToolkit/Features/Auth/authSlice";
+import Dashboard from "../../../../Pages/Dashboard/Dashboard";
+import {
+  login,
+  logout,
+} from "../../../../ReduxToolkit/Features/Auth/authSlice";
+import {
+  Route,
+  Navigate,
+  // Navigate,
+  // useLocation,
+} from "react-router-dom";
+
 const Index = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(checkLoggedIn());
-    console.log(checkLoggedIn());
-  }, []);
-  const { isLoading } = useSelector((state) => state.auth);
-  console.log("isLoading is", isLoading);
+  const [notice, setNotice] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const { isLoading, isLoggedIn, currentUser } = useSelector(
+    (state) => state.auth
+  );
+
   const initialValues = {
     email: "",
     password: "",
   };
+  const postData = async () => {
+    const { email, password } = values;
+
+    const res = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+
+    const data = await res.json();
+    console.log(data.user, "this is data", email, password);
+    if (data.status === "success") {
+      setNotice("You are successfully logged in.");
+      dispatch(login(data.user));
+      setShowAlert(true);
+      console.log(currentUser, "current user");
+    } else {
+      dispatch(logout());
+      setShowAlert(true);
+      setNotice(data.message);
+    }
+  };
+
   const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
     useFormik({
       initialValues,
       validationSchema: loginSchema,
-      validateOnChange: true,
+      validateOnChange: false,
       validateOnBlur: false,
       //// By disabling validation onChange and onBlur formik will validate on submit.
       onSubmit: (values, action) => {
@@ -35,10 +73,10 @@ const Index = () => {
     <>
       <Navbar />
       <div className="login-form-container">
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form">
           <h2>Login</h2>
           <div className="input-field">
-            <label htmlFor="email">E-mail address</label>
+            <label htmlFor="email">E-mail</label>
 
             <input
               type="text"
@@ -76,18 +114,32 @@ const Index = () => {
             <input type="checkbox" id="remember" />
             <label htmlFor="remember">Remember me</label>
           </div>
+          {showAlert &&
+            (isLoggedIn ? (
+              <Navigate to="/account/information" />
+            ) : (
+              <div
+                className={`notice ${
+                  isLoggedIn ? "notice--success" : "notice--warning"
+                }`}
+              >
+                <p>{notice}</p>
+              </div>
+            ))}
           <div className="login-form-buttons">
-            <button className="btn-primary" type="submit">
+            <button className="btn-primary" type="button" onClick={postData}>
               Login
             </button>
-            <button className="">Forgot password</button>
+            <button className="" type="button">
+              Forgot password
+            </button>
           </div>
           <div className="login-form-footer">
             Don't have an account yet? <span> Click here </span>to create one.
           </div>
         </form>
       </div>
-      {/* {isLogin && <Dashboard />} */}
+      {isLoggedIn && <Dashboard />}
     </>
   );
 };

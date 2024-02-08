@@ -1,7 +1,13 @@
 import React from "react";
 import "./Account.css";
 import { SlBell } from "react-icons/sl";
+import { useSelector } from "react-redux";
+
 const Inbox = () => {
+  const { isLoading, isLoggedIn, currentUser } = useSelector(
+    (state) => state.auth
+  );
+  const { name, email, phoneNumber, role } = currentUser;
   return (
     <div className="dashboard-content-container-white">
       <div className="dashboard-content-header">
@@ -12,23 +18,23 @@ const Inbox = () => {
         <h4>Your personal information</h4>
         <div className="information-list">
           <h5>Name</h5>
-          <p>Syed Muhammad Taha</p>
+          <p>{name}</p>
         </div>
         <div className="information-list">
           <h5>Email</h5>
-          <p>tahapk58752@gmail.com</p>
+          <p>{email}</p>
         </div>
         <div className="information-list">
           <h5>Phone</h5>
-          <p>+923471228231</p>
+          <p>{phoneNumber}</p>
         </div>
         <div className="information-list">
           <h5>Preferred currency</h5>
-          <p>+923471228231</p>
+          <p>PKR</p>
         </div>
         <div className="information-list">
           <h5>User type</h5>
-          <p>+923471228231</p>
+          <p>{role}</p>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import FormHeader from "../../Components/Forms/FormHeader/RegisterationHeader";
-import AdditionalInfoForm from "../../Components/Forms/AdditionalInfoForm/AdditionalInfoForm";
-import "../../Components/Forms/AdditionalInfoForm/AdditionalInfoForm.css";
+import FormHeader from "../../Components/Forms/CommonForms/FormHeader/FormHeader";
+import AdditionalInfoForm from "../../Components/Forms/BuyerRelatedForms/AdditionalInfoForm/AdditionalInfoForm";
+import "../../Components/Forms/BuyerRelatedForms/AdditionalInfoForm/AdditionalInfoForm.css";
 import { additionalInfo } from "../../assets/RequiredData/FormData";
 
 const index = () => {
@@ -9,7 +9,7 @@ const index = () => {
     <>
       <main className="form-header-container form-background">
         <FormHeader {...additionalInfo} />
-        <form className="additional-info-form-container form-top ">
+        <form>
           <AdditionalInfoForm {...additionalInfo} />
         </form>
       </main>

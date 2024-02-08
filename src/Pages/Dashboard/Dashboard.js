@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import Offers from "./Offers/Offers";
 import Inbox from "./Inbox/Inbox";
 import Notifications from "./Notifications/Notifications";
 import Account from "./Account/Account";
 import Navbar from "../../Components/Navbar/Navbar";
 import { FormControlLabel, FormGroup, Switch } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../ReduxToolkit/Features/Auth/authSlice";
+
 const Dashboard = () => {
+  const dispatch = useDispatch();
+  const { isLoggedIn } = useSelector((state) => state.auth);
   const location = useLocation();
   const pathName = location.pathname.split("/");
   let currentPage = pathName[2];
@@ -17,7 +22,7 @@ const Dashboard = () => {
     { id: 2, name: "Inbox" },
     { id: 3, name: "Notifications" },
     { id: 4, name: "Account" },
-    { id: 5, name: "Receipts" },
+    { id: 5, name: "Receipts" },  
     { id: 6, name: "Subscriptions" },
   ];
 
@@ -28,7 +33,9 @@ const Dashboard = () => {
   useEffect(() => {
     setActiveOption(currentPage);
   }, [location]);
-
+  function handleLogout() {
+    dispatch(logout());
+  }
   return (
     <>
       <Navbar />
@@ -73,7 +80,9 @@ const Dashboard = () => {
               </ul>
             </div>
             <div className="sidebar-footer">
-              <button className="btn-ghost"> logout</button>
+              <button className="btn-ghost" onClick={handleLogout}>
+                logout
+              </button>
             </div>
           </div>
           <div className="dashboard-content">
@@ -86,6 +95,8 @@ const Dashboard = () => {
           </div>
         </section>
       </main>
+
+      {!isLoggedIn && <Navigate to={"/"} />}
     </>
   );
 };

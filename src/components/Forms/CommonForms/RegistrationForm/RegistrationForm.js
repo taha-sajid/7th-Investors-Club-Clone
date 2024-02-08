@@ -1,16 +1,28 @@
-import React from "react";
-import "./RegisterForm.css";
+import React, { useState } from "react";
+import "./RegistrationForm.css";
 import { useFormik } from "formik";
-import { signUpSchema } from "../../../Schema/signUpSchema";
+import { signUpSchema } from "../../../../Schema/signUpSchema";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  login,
+  logout,
+} from "../../../../ReduxToolkit/Features/Auth/authSlice";
 
 const Index = () => {
+  const dispatch = useDispatch();
+  const [userRole, setUserRole] = useState("Buyer");
+  const { isLoading, isLoggedIn, currentUser } = useSelector(
+    (state) => state.auth
+  );
+
   const initialValues = {
     name: "",
     email: "",
     password: "",
     passwordConfirm: "",
     phoneNumber: "",
+    role: "",
   };
   const {
     values,
@@ -20,6 +32,7 @@ const Index = () => {
     errors,
     touched,
     isValid,
+    setFieldValue,
     // toggle,
   } = useFormik({
     initialValues,
@@ -35,7 +48,8 @@ const Index = () => {
   });
 
   const postData = async () => {
-    const { name, email, password, phoneNumber, passwordConfirm } = values;
+    const { name, email, password, phoneNumber, passwordConfirm, role } =
+      values;
 
     const res = await fetch("http://localhost:5000/register", {
       method: "POST",
@@ -48,17 +62,33 @@ const Index = () => {
         passwordConfirm,
         password,
         phoneNumber,
+        role,
       }),
     });
 
     const data = await res.json();
-    console.log(data, "this is data");
+    // console.log(data.status, data.user, "this is data");
+
+    if (data.status === "success") {
+      // setNotice("You are successfully logged in.");
+      dispatch(login(data.data.user));
+      // setShowAlert(true);
+      console.log(currentUser, "current user");
+    } else {
+      dispatch(logout());
+      // setShowAlert(true);
+      // setNotice(data.message);
+    }
   };
   const handleButtonClick = () => {
     handleSubmit();
     postData();
   };
-
+  const handleRole = (role) => {
+    setFieldValue("role", role);
+    setUserRole(role);
+    console.log(role);
+  };
   return (
     <>
       <form
@@ -69,8 +99,28 @@ const Index = () => {
         <div className="form-section">
           <h4>Your primary reason for registering?</h4>
           <div className="buttons-container">
-            <button className="btn-secondary btn-lg">I'm looking to buy</button>
-            <button className="btn-secondary btn-lg btn-neutral--outline">
+            <button
+              className={`btn-secondary btn-lg ${
+                userRole !== "Buyer" ? "btn-neutral--outline" : ""
+              }`}
+              name="role"
+              id="role"
+              type="button"
+              value={"Buyer"}
+              onClick={() => handleRole("Buyer")}
+            >
+              I'm looking to buy
+            </button>
+            <button
+              className={`btn-secondary btn-lg ${
+                userRole !== "Seller" ? "btn-neutral--outline" : ""
+              }`}
+              type="button"
+              value={"Seller"}
+              onClick={() => {
+                handleRole("Seller");
+              }}
+            >
               I want to sell
             </button>
           </div>
@@ -188,7 +238,14 @@ const Index = () => {
           </div>
         </div>
 
-        <Link to={"/additional-info"} disabled={!isValid}>
+        <Link
+          to={`${
+            userRole === "Buyer"
+              ? "/additional-info"
+              : "/sell-your-website/intro/"
+          } `}
+          disabled={!isValid}
+        >
           <button
             className={`btn-lg btn-primary ${isValid ? "" : "btn-disabled"}`}
             type="submit"

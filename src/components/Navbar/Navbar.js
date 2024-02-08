@@ -11,6 +11,7 @@ import {
   NavLogoLargeScreenWhite,
   NavLogoLargeScreenBlue,
 } from "../../assets/RequiredData/Svgs";
+import { useSelector } from "react-redux";
 
 // IMPORT STYLE CSS FILE
 import "./Navbar.css";
@@ -22,31 +23,38 @@ import NavInbox from "../NavInbox/NavInbox";
 const Index = () => {
   // isNavActive checks Nav Togglebar
   const [isNavActive, setIsNavActive] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isMessageOpen, setIsMessageOpen] = useState(false);
-
+  const { isLoading, isLoggedIn, currentUser } = useSelector(
+    (state) => state.auth
+  );
+  // const isLoggedIn = true;
   // Check what the current page is
   const location = useLocation();
   const pathName = location.pathname.split("/");
   const currentPage = pathName[1];
 
-  const isNavWhite = currentPage === "account" || currentPage === "login";
+  const isNavWhite =
+    currentPage === "account" ||
+    currentPage === "login" ||
+    currentPage === "listings";
 
-  let navbarClass = ""; // Default navbar class
+  let navWhite = ""; // Default navbar class
 
   // Using as a reference of notification & message DOM element
   const notificationRef = useRef(null);
   const messageRef = useRef(null);
 
   // Check the current location and assign the appropriate class
-  if (currentPage === "account") {
-    navbarClass = "account";
-  } else if (currentPage === "login") {
-    navbarClass = "login";
+  if (
+    currentPage === "account" ||
+    currentPage === "login" ||
+    currentPage === "listings"
+  ) {
+    navWhite = "nav_white";
   }
 
-  // console.log(navbarClass, "className");
+  // console.log(navWhite, "className");
   // console.log(location.pathname);
 
   // This function is for disabling background scrolling when the nav toggle open
@@ -83,12 +91,12 @@ const Index = () => {
       window.removeEventListener("click", handleClick);
     };
   });
-
+  console.log(isLoggedIn);
   return (
     <>
       <nav
         className={
-          isNavActive ? "navigation nav-active" : `navigation ${navbarClass}`
+          isNavActive ? "navigation nav-active" : `navigation ${navWhite}`
         }
       >
         {/* Navbar toggle */}
@@ -128,12 +136,13 @@ const Index = () => {
               <Link to={"/sell-your-website"} className={"visited-link"}>
                 sell
               </Link>
+              <Link to={"/listings"}>Listings</Link>
               <Link to={"/premium"} className="premium ">
                 premium
               </Link>
             </div>
           </div>
-          {!isLogin && (
+          {!isLoggedIn && (
             <div className="nav-btn">
               <Link to={"/login"}>
                 <button className={"btn-ghost"}>Login</button>
@@ -145,20 +154,17 @@ const Index = () => {
           )}
 
           {/* If user is Login then this code will render */}
-          {isLogin && (
+          {isLoggedIn && (
             <div className="login-nav-btn">
               <Link to={"/financial-info"} className="user-options">
                 Check Application Status
               </Link>
 
-              <Link to={"/purchases"} className="user-options margin--left__lg">
-                My Purchases
-              </Link>
               <Link to={"/account/offers"} className="avatar margin--left__sml">
                 <i>
                   <BsFillPersonFill />
                 </i>
-                <p> chriss</p>
+                <p> {currentUser.name && currentUser.name}</p>
               </Link>
 
               {/* MESSAGE toggle */}

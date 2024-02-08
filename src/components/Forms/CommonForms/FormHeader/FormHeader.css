@@ -168,6 +168,19 @@
     color: var(--color-secondary);
 }
 
+.form-header-container .criteria {
+    margin-top: 1rem;
+}
+
+.criteria div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    line-height: 1.8rem;
+
+}
+
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
     .registeration-header-container .form-information {

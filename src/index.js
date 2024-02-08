@@ -5,14 +5,14 @@ import reportWebVitals from "./reportWebVitals";
 // import { BrowserRouter as Router } from "react-router-dom";
 import { store } from "./ReduxToolkit/store";
 import { Provider } from "react-redux";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>
-  ,
+  </React.StrictMode>,
   document.getElementById("root")
 );
 

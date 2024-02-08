@@ -193,27 +193,28 @@
   cursor: default;
   z-index: 1;
 }
+.nav_white{
+  background-color: white;
+}
 
-.account .message-icon,
-.account .notification-icon,
-.login .message-icon,
-.login .notification-icon {
+.nav_white .message-icon,
+.nav_white .notification-icon {
   background-color: rgba(0, 0, 0, .05);
 
 }
 
-.account .avatar,
-.login .avatar {
+
+.nav_white .avatar {
   background-color: rgba(0, 0, 0, .05);
 }
 
-.account a,
-.login a {
+
+.nav_white a {
   color: var(--color-primary) !important;
 }
 
-.account .nav-content .login-nav-btn a i svg,
-.login .nav-content .login-nav-btn a i svg {
+
+.nav_white .nav-content .login-nav-btn a i svg {
   fill: var(--dark-text) !important;
 }
 

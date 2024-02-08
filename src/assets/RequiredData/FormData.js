@@ -1,6 +1,8 @@
 import { BsCheck2 } from "react-icons/bs";
-import React from 'react';
+import React from "react";
+import { BagSVG, CalendarSVG, TargetSVG } from "./Svgs";
 
+// COMMON FORM DATA
 export const register = {
   heading: `Let's get things rolling...`,
   stepsIndicator: [1, 2, 3],
@@ -9,6 +11,7 @@ export const register = {
   button: ["Next step"],
 };
 
+// BUYER FORM DATA
 export const additionalInfo = {
   heading: `Help us adjust your Investors Club experience`,
   stepsIndicator: [<BsCheck2 />, 2, 3],
@@ -54,4 +57,28 @@ export const applicationCompleted = {
   stepDescription: `Your application will be reviewed within 24 hours. Once approved, we’ll contact you via email with details to activate your account and start your subscription.`,
   headerButton: ["Update financial info", "Browse listings"],
   support: "Having issues? Please contact support@investors.club",
+};
+
+// SELLER FORM DATA
+
+export const businessInfo = {
+  heading: "Seller Submission Form",
+  description:
+    "Currently, we are accepting content websites and e-commerce businesses to be sold on our marketplace. What business model is your business in?",
+  button: ["Content Site", "E-Commerce Site"],
+};
+
+export const monitizationInfo = {
+  heading: "Monetization info",
+  stepsIndicator: [1, 2, 3, 4],
+  stepName:
+    "Please make sure your site matches the criteria below before you proceed:",
+  criteria: [
+    { icon: <TargetSVG />, description: "Targets English-speaking market" },
+    {
+      icon: <BagSVG />,
+      description: "Makes at least $500 per month in profit",
+    },
+    { icon: <CalendarSVG />, description: "Is at least 12 months old" },
+  ],
 };
